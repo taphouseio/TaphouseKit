@@ -2,9 +2,7 @@ Pod::Spec.new do |s|
   s.name             = "TaphouseKit"
   s.version          = "0.1.0"
   s.summary          = "The common utilities used by Taphouse apps."
-  s.description      = <<-DESC
-                       Includes some Core Data helpers and custom views
-                       DESC
+  s.description      = "Includes some Core Data helpers and custom views"
   s.homepage         = "https://github.com/taphouseio/TaphouseKit"
   s.license          = 'MIT'
   s.author           = { "Jared Sorge" => "jared@jsorge.net" }
