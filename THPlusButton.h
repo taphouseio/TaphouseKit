@@ -1,9 +1,9 @@
 //
-//  SBPlusButton.h
-//  Scorebook
+//  THPlusButton.h
+//  TaphouseKit
 //
 //  Created by Jared Sorge on 8/17/14.
-//  Copyright (c) 2014 Taphouse Software LLC. All rights reserved.
+//  Copyright (c) 2014 Taphouse Software. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
