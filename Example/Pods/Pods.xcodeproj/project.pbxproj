@@ -8,13 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		003436D962CB408A0F6B32A9 /* Pods-TaphouseKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F4D619250E344FDA0AB86E95 /* Pods-TaphouseKit-dummy.m */; };
-		93073E661A855EBE0008EFA9 /* THMinusButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 93073E631A855EBE0008EFA9 /* THMinusButton.m */; };
-		93073E671A855EBE0008EFA9 /* THPlusButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 93073E651A855EBE0008EFA9 /* THPlusButton.m */; };
 		930CA48C1A85533D001CC012 /* THBackgroundImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 930CA4831A85533D001CC012 /* THBackgroundImageDownloader.m */; };
 		930CA48D1A85533D001CC012 /* THFetchedResultsControllerHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 930CA4851A85533D001CC012 /* THFetchedResultsControllerHelper.m */; };
 		930CA48E1A85533D001CC012 /* THGearButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 930CA4871A85533D001CC012 /* THGearButton.m */; };
 		930CA48F1A85533D001CC012 /* THManagedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 930CA4891A85533D001CC012 /* THManagedObject.m */; };
 		930CA4901A85533D001CC012 /* THManagedObjectContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 930CA48B1A85533D001CC012 /* THManagedObjectContext.m */; };
+		93BA63331A8562DA00B8828E /* THMinusButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 93BA63301A8562DA00B8828E /* THMinusButton.m */; };
+		93BA63341A8562DA00B8828E /* THPlusButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 93BA63321A8562DA00B8828E /* THPlusButton.m */; };
 		E10FCEE03432C12988DFCB09 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81A5EBD336943D67B6AA2EB8 /* Foundation.framework */; };
 		EE02F56643EE7D61BFA5C9AD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81A5EBD336943D67B6AA2EB8 /* Foundation.framework */; };
 		F319DB333E27B59E6727B5F7 /* Pods-TaphouseKit-TaphouseKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C67C135209F530BBBADF016 /* Pods-TaphouseKit-TaphouseKit-dummy.m */; };
@@ -47,10 +47,6 @@
 		7F8B3EA45DBE1C8433095D93 /* libPods-TaphouseKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TaphouseKit.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81A5EBD336943D67B6AA2EB8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		8C67C135209F530BBBADF016 /* Pods-TaphouseKit-TaphouseKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TaphouseKit-TaphouseKit-dummy.m"; sourceTree = "<group>"; };
-		93073E621A855EBE0008EFA9 /* THMinusButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THMinusButton.h; sourceTree = "<group>"; };
-		93073E631A855EBE0008EFA9 /* THMinusButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THMinusButton.m; sourceTree = "<group>"; };
-		93073E641A855EBE0008EFA9 /* THPlusButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THPlusButton.h; sourceTree = "<group>"; };
-		93073E651A855EBE0008EFA9 /* THPlusButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THPlusButton.m; sourceTree = "<group>"; };
 		930CA4821A85533D001CC012 /* THBackgroundImageDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = THBackgroundImageDownloader.h; path = Pod/Classes/THBackgroundImageDownloader.h; sourceTree = "<group>"; };
 		930CA4831A85533D001CC012 /* THBackgroundImageDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = THBackgroundImageDownloader.m; path = Pod/Classes/THBackgroundImageDownloader.m; sourceTree = "<group>"; };
 		930CA4841A85533D001CC012 /* THFetchedResultsControllerHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = THFetchedResultsControllerHelper.h; path = Pod/Classes/THFetchedResultsControllerHelper.h; sourceTree = "<group>"; };
@@ -61,6 +57,10 @@
 		930CA4891A85533D001CC012 /* THManagedObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = THManagedObject.m; path = Pod/Classes/THManagedObject.m; sourceTree = "<group>"; };
 		930CA48A1A85533D001CC012 /* THManagedObjectContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = THManagedObjectContext.h; path = Pod/Classes/THManagedObjectContext.h; sourceTree = "<group>"; };
 		930CA48B1A85533D001CC012 /* THManagedObjectContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = THManagedObjectContext.m; path = Pod/Classes/THManagedObjectContext.m; sourceTree = "<group>"; };
+		93BA632F1A8562DA00B8828E /* THMinusButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = THMinusButton.h; path = Pod/Classes/THMinusButton.h; sourceTree = "<group>"; };
+		93BA63301A8562DA00B8828E /* THMinusButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = THMinusButton.m; path = Pod/Classes/THMinusButton.m; sourceTree = "<group>"; };
+		93BA63311A8562DA00B8828E /* THPlusButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = THPlusButton.h; path = Pod/Classes/THPlusButton.h; sourceTree = "<group>"; };
+		93BA63321A8562DA00B8828E /* THPlusButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = THPlusButton.m; path = Pod/Classes/THPlusButton.m; sourceTree = "<group>"; };
 		9797B62D577ED3A017526804 /* Pods-TaphouseKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TaphouseKit.debug.xcconfig"; sourceTree = "<group>"; };
 		9D9CF92DF7EA46087C41C1A1 /* TaphouseKit.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TaphouseKit.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7024F0B83349F3DD689B485 /* Pods-TaphouseKit-TaphouseKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TaphouseKit-TaphouseKit-prefix.pch"; sourceTree = "<group>"; };
@@ -175,10 +175,10 @@
 		930CA4921A855353001CC012 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				93073E621A855EBE0008EFA9 /* THMinusButton.h */,
-				93073E631A855EBE0008EFA9 /* THMinusButton.m */,
-				93073E641A855EBE0008EFA9 /* THPlusButton.h */,
-				93073E651A855EBE0008EFA9 /* THPlusButton.m */,
+				93BA632F1A8562DA00B8828E /* THMinusButton.h */,
+				93BA63301A8562DA00B8828E /* THMinusButton.m */,
+				93BA63311A8562DA00B8828E /* THPlusButton.h */,
+				93BA63321A8562DA00B8828E /* THPlusButton.m */,
 				930CA4861A85533D001CC012 /* THGearButton.h */,
 				930CA4871A85533D001CC012 /* THGearButton.m */,
 			);
@@ -340,8 +340,8 @@
 				930CA48E1A85533D001CC012 /* THGearButton.m in Sources */,
 				930CA48D1A85533D001CC012 /* THFetchedResultsControllerHelper.m in Sources */,
 				930CA48C1A85533D001CC012 /* THBackgroundImageDownloader.m in Sources */,
-				93073E671A855EBE0008EFA9 /* THPlusButton.m in Sources */,
-				93073E661A855EBE0008EFA9 /* THMinusButton.m in Sources */,
+				93BA63341A8562DA00B8828E /* THPlusButton.m in Sources */,
+				93BA63331A8562DA00B8828E /* THMinusButton.m in Sources */,
 				003436D962CB408A0F6B32A9 /* Pods-TaphouseKit-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
