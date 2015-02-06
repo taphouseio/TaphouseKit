@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		003436D962CB408A0F6B32A9 /* Pods-TaphouseKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F4D619250E344FDA0AB86E95 /* Pods-TaphouseKit-dummy.m */; };
+		93073E661A855EBE0008EFA9 /* THMinusButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 93073E631A855EBE0008EFA9 /* THMinusButton.m */; };
+		93073E671A855EBE0008EFA9 /* THPlusButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 93073E651A855EBE0008EFA9 /* THPlusButton.m */; };
 		930CA48C1A85533D001CC012 /* THBackgroundImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 930CA4831A85533D001CC012 /* THBackgroundImageDownloader.m */; };
 		930CA48D1A85533D001CC012 /* THFetchedResultsControllerHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 930CA4851A85533D001CC012 /* THFetchedResultsControllerHelper.m */; };
 		930CA48E1A85533D001CC012 /* THGearButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 930CA4871A85533D001CC012 /* THGearButton.m */; };
@@ -45,6 +47,10 @@
 		7F8B3EA45DBE1C8433095D93 /* libPods-TaphouseKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TaphouseKit.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81A5EBD336943D67B6AA2EB8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		8C67C135209F530BBBADF016 /* Pods-TaphouseKit-TaphouseKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TaphouseKit-TaphouseKit-dummy.m"; sourceTree = "<group>"; };
+		93073E621A855EBE0008EFA9 /* THMinusButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THMinusButton.h; sourceTree = "<group>"; };
+		93073E631A855EBE0008EFA9 /* THMinusButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THMinusButton.m; sourceTree = "<group>"; };
+		93073E641A855EBE0008EFA9 /* THPlusButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THPlusButton.h; sourceTree = "<group>"; };
+		93073E651A855EBE0008EFA9 /* THPlusButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THPlusButton.m; sourceTree = "<group>"; };
 		930CA4821A85533D001CC012 /* THBackgroundImageDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = THBackgroundImageDownloader.h; path = Pod/Classes/THBackgroundImageDownloader.h; sourceTree = "<group>"; };
 		930CA4831A85533D001CC012 /* THBackgroundImageDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = THBackgroundImageDownloader.m; path = Pod/Classes/THBackgroundImageDownloader.m; sourceTree = "<group>"; };
 		930CA4841A85533D001CC012 /* THFetchedResultsControllerHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = THFetchedResultsControllerHelper.h; path = Pod/Classes/THFetchedResultsControllerHelper.h; sourceTree = "<group>"; };
@@ -169,6 +175,10 @@
 		930CA4921A855353001CC012 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				93073E621A855EBE0008EFA9 /* THMinusButton.h */,
+				93073E631A855EBE0008EFA9 /* THMinusButton.m */,
+				93073E641A855EBE0008EFA9 /* THPlusButton.h */,
+				93073E651A855EBE0008EFA9 /* THPlusButton.m */,
 				930CA4861A85533D001CC012 /* THGearButton.h */,
 				930CA4871A85533D001CC012 /* THGearButton.m */,
 			);
@@ -330,6 +340,8 @@
 				930CA48E1A85533D001CC012 /* THGearButton.m in Sources */,
 				930CA48D1A85533D001CC012 /* THFetchedResultsControllerHelper.m in Sources */,
 				930CA48C1A85533D001CC012 /* THBackgroundImageDownloader.m in Sources */,
+				93073E671A855EBE0008EFA9 /* THPlusButton.m in Sources */,
+				93073E661A855EBE0008EFA9 /* THMinusButton.m in Sources */,
 				003436D962CB408A0F6B32A9 /* Pods-TaphouseKit-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
