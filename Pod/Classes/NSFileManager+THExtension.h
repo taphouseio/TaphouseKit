@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSFileManager (extension)
+@interface NSFileManager (THExtension)
 /**
  *  File path to the documents directory
  *

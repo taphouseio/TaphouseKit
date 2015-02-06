@@ -6,9 +6,9 @@
 //  Copyright (c) 2014 Taphouse Software. All rights reserved.
 //
 
-#import "NSFileManager+extension.h"
+#import "NSFileManager+THExtension.h"
 
-@implementation NSFileManager (extension)
+@implementation NSFileManager (THExtension)
 + (NSString *)th_documentsPath
 {
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);

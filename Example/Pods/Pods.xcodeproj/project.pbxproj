@@ -15,7 +15,7 @@
 		930CA4901A85533D001CC012 /* THManagedObjectContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 930CA48B1A85533D001CC012 /* THManagedObjectContext.m */; };
 		93BA63331A8562DA00B8828E /* THMinusButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 93BA63301A8562DA00B8828E /* THMinusButton.m */; };
 		93BA63341A8562DA00B8828E /* THPlusButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 93BA63321A8562DA00B8828E /* THPlusButton.m */; };
-		93BA633E1A85713F00B8828E /* NSFileManager+extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 93BA633D1A85713F00B8828E /* NSFileManager+extension.m */; };
+		93BA633E1A85713F00B8828E /* NSFileManager+THExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 93BA633D1A85713F00B8828E /* NSFileManager+THExtension.m */; };
 		E10FCEE03432C12988DFCB09 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81A5EBD336943D67B6AA2EB8 /* Foundation.framework */; };
 		EE02F56643EE7D61BFA5C9AD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81A5EBD336943D67B6AA2EB8 /* Foundation.framework */; };
 		F319DB333E27B59E6727B5F7 /* Pods-TaphouseKit-TaphouseKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C67C135209F530BBBADF016 /* Pods-TaphouseKit-TaphouseKit-dummy.m */; };
@@ -62,8 +62,8 @@
 		93BA63301A8562DA00B8828E /* THMinusButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = THMinusButton.m; path = Pod/Classes/THMinusButton.m; sourceTree = "<group>"; };
 		93BA63311A8562DA00B8828E /* THPlusButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = THPlusButton.h; path = Pod/Classes/THPlusButton.h; sourceTree = "<group>"; };
 		93BA63321A8562DA00B8828E /* THPlusButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = THPlusButton.m; path = Pod/Classes/THPlusButton.m; sourceTree = "<group>"; };
-		93BA633C1A85713F00B8828E /* NSFileManager+extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSFileManager+extension.h"; path = "Pod/Classes/NSFileManager+extension.h"; sourceTree = "<group>"; };
-		93BA633D1A85713F00B8828E /* NSFileManager+extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSFileManager+extension.m"; path = "Pod/Classes/NSFileManager+extension.m"; sourceTree = "<group>"; };
+		93BA633C1A85713F00B8828E /* NSFileManager+THExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSFileManager+THExtension.h"; path = "Pod/Classes/NSFileManager+THExtension.h"; sourceTree = "<group>"; };
+		93BA633D1A85713F00B8828E /* NSFileManager+THExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSFileManager+THExtension.m"; path = "Pod/Classes/NSFileManager+THExtension.m"; sourceTree = "<group>"; };
 		9797B62D577ED3A017526804 /* Pods-TaphouseKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TaphouseKit.debug.xcconfig"; sourceTree = "<group>"; };
 		9D9CF92DF7EA46087C41C1A1 /* TaphouseKit.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TaphouseKit.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7024F0B83349F3DD689B485 /* Pods-TaphouseKit-TaphouseKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TaphouseKit-TaphouseKit-prefix.pch"; sourceTree = "<group>"; };
@@ -200,8 +200,8 @@
 		93BA633B1A85709900B8828E /* Categories */ = {
 			isa = PBXGroup;
 			children = (
-				93BA633C1A85713F00B8828E /* NSFileManager+extension.h */,
-				93BA633D1A85713F00B8828E /* NSFileManager+extension.m */,
+				93BA633C1A85713F00B8828E /* NSFileManager+THExtension.h */,
+				93BA633D1A85713F00B8828E /* NSFileManager+THExtension.m */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -354,7 +354,7 @@
 				930CA48D1A85533D001CC012 /* THFetchedResultsControllerHelper.m in Sources */,
 				930CA48C1A85533D001CC012 /* THBackgroundImageDownloader.m in Sources */,
 				93BA63341A8562DA00B8828E /* THPlusButton.m in Sources */,
-				93BA633E1A85713F00B8828E /* NSFileManager+extension.m in Sources */,
+				93BA633E1A85713F00B8828E /* NSFileManager+THExtension.m in Sources */,
 				93BA63331A8562DA00B8828E /* THMinusButton.m in Sources */,
 				003436D962CB408A0F6B32A9 /* Pods-TaphouseKit-dummy.m in Sources */,
 			);
