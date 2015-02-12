@@ -13,6 +13,7 @@
 		930CA48E1A85533D001CC012 /* THGearButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 930CA4871A85533D001CC012 /* THGearButton.m */; };
 		930CA48F1A85533D001CC012 /* THManagedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 930CA4891A85533D001CC012 /* THManagedObject.m */; };
 		930CA4901A85533D001CC012 /* THManagedObjectContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 930CA48B1A85533D001CC012 /* THManagedObjectContext.m */; };
+		9336A6A51A8D6AE10090E517 /* THModalSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 9336A6A41A8D6AE10090E517 /* THModalSegue.m */; };
 		93BA63331A8562DA00B8828E /* THMinusButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 93BA63301A8562DA00B8828E /* THMinusButton.m */; };
 		93BA63341A8562DA00B8828E /* THPlusButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 93BA63321A8562DA00B8828E /* THPlusButton.m */; };
 		93BA633E1A85713F00B8828E /* NSFileManager+THExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 93BA633D1A85713F00B8828E /* NSFileManager+THExtension.m */; };
@@ -58,6 +59,8 @@
 		930CA4891A85533D001CC012 /* THManagedObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = THManagedObject.m; path = Pod/Classes/THManagedObject.m; sourceTree = "<group>"; };
 		930CA48A1A85533D001CC012 /* THManagedObjectContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = THManagedObjectContext.h; path = Pod/Classes/THManagedObjectContext.h; sourceTree = "<group>"; };
 		930CA48B1A85533D001CC012 /* THManagedObjectContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = THManagedObjectContext.m; path = Pod/Classes/THManagedObjectContext.m; sourceTree = "<group>"; };
+		9336A6A31A8D6AE10090E517 /* THModalSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = THModalSegue.h; path = Pod/Classes/Segues/THModalSegue.h; sourceTree = "<group>"; };
+		9336A6A41A8D6AE10090E517 /* THModalSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = THModalSegue.m; path = Pod/Classes/Segues/THModalSegue.m; sourceTree = "<group>"; };
 		93BA632F1A8562DA00B8828E /* THMinusButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = THMinusButton.h; path = Pod/Classes/THMinusButton.h; sourceTree = "<group>"; };
 		93BA63301A8562DA00B8828E /* THMinusButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = THMinusButton.m; path = Pod/Classes/THMinusButton.m; sourceTree = "<group>"; };
 		93BA63311A8562DA00B8828E /* THPlusButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = THPlusButton.h; path = Pod/Classes/THPlusButton.h; sourceTree = "<group>"; };
@@ -197,6 +200,15 @@
 			name = Helpers;
 			sourceTree = "<group>";
 		};
+		9336A6A21A8D6AB80090E517 /* Custom Segues */ = {
+			isa = PBXGroup;
+			children = (
+				9336A6A31A8D6AE10090E517 /* THModalSegue.h */,
+				9336A6A41A8D6AE10090E517 /* THModalSegue.m */,
+			);
+			name = "Custom Segues";
+			sourceTree = "<group>";
+		};
 		93BA633B1A85709900B8828E /* Categories */ = {
 			isa = PBXGroup;
 			children = (
@@ -219,6 +231,7 @@
 		D49A9196C5AB3AE05756489C /* TaphouseKit */ = {
 			isa = PBXGroup;
 			children = (
+				9336A6A21A8D6AB80090E517 /* Custom Segues */,
 				93BA633B1A85709900B8828E /* Categories */,
 				930CA4941A855367001CC012 /* Helpers */,
 				930CA4921A855353001CC012 /* Views */,
@@ -353,6 +366,7 @@
 				930CA48E1A85533D001CC012 /* THGearButton.m in Sources */,
 				930CA48D1A85533D001CC012 /* THFetchedResultsControllerHelper.m in Sources */,
 				930CA48C1A85533D001CC012 /* THBackgroundImageDownloader.m in Sources */,
+				9336A6A51A8D6AE10090E517 /* THModalSegue.m in Sources */,
 				93BA63341A8562DA00B8828E /* THPlusButton.m in Sources */,
 				93BA633E1A85713F00B8828E /* NSFileManager+THExtension.m in Sources */,
 				93BA63331A8562DA00B8828E /* THMinusButton.m in Sources */,
