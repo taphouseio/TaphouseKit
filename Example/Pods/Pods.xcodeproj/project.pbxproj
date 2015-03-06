@@ -14,6 +14,7 @@
 		930CA48F1A85533D001CC012 /* THManagedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 930CA4891A85533D001CC012 /* THManagedObject.m */; };
 		930CA4901A85533D001CC012 /* THManagedObjectContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 930CA48B1A85533D001CC012 /* THManagedObjectContext.m */; };
 		9336A6A51A8D6AE10090E517 /* THModalSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 9336A6A41A8D6AE10090E517 /* THModalSegue.m */; };
+		93B0464B1AAA41D100887F18 /* THTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 93B0464A1AAA41D100887F18 /* THTableViewDataSource.m */; };
 		93BA63331A8562DA00B8828E /* THMinusButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 93BA63301A8562DA00B8828E /* THMinusButton.m */; };
 		93BA63341A8562DA00B8828E /* THPlusButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 93BA63321A8562DA00B8828E /* THPlusButton.m */; };
 		93BA633E1A85713F00B8828E /* NSFileManager+THExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 93BA633D1A85713F00B8828E /* NSFileManager+THExtension.m */; };
@@ -61,6 +62,8 @@
 		930CA48B1A85533D001CC012 /* THManagedObjectContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = THManagedObjectContext.m; path = Pod/Classes/THManagedObjectContext.m; sourceTree = "<group>"; };
 		9336A6A31A8D6AE10090E517 /* THModalSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = THModalSegue.h; path = Pod/Classes/Segues/THModalSegue.h; sourceTree = "<group>"; };
 		9336A6A41A8D6AE10090E517 /* THModalSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = THModalSegue.m; path = Pod/Classes/Segues/THModalSegue.m; sourceTree = "<group>"; };
+		93B046491AAA41D100887F18 /* THTableViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = THTableViewDataSource.h; path = Pod/Classes/Helpers/THTableViewDataSource.h; sourceTree = "<group>"; };
+		93B0464A1AAA41D100887F18 /* THTableViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = THTableViewDataSource.m; path = Pod/Classes/Helpers/THTableViewDataSource.m; sourceTree = "<group>"; };
 		93BA632F1A8562DA00B8828E /* THMinusButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = THMinusButton.h; path = Pod/Classes/THMinusButton.h; sourceTree = "<group>"; };
 		93BA63301A8562DA00B8828E /* THMinusButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = THMinusButton.m; path = Pod/Classes/THMinusButton.m; sourceTree = "<group>"; };
 		93BA63311A8562DA00B8828E /* THPlusButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = THPlusButton.h; path = Pod/Classes/THPlusButton.h; sourceTree = "<group>"; };
@@ -196,6 +199,8 @@
 			children = (
 				930CA4821A85533D001CC012 /* THBackgroundImageDownloader.h */,
 				930CA4831A85533D001CC012 /* THBackgroundImageDownloader.m */,
+				93B046491AAA41D100887F18 /* THTableViewDataSource.h */,
+				93B0464A1AAA41D100887F18 /* THTableViewDataSource.m */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -371,6 +376,7 @@
 				93BA633E1A85713F00B8828E /* NSFileManager+THExtension.m in Sources */,
 				93BA63331A8562DA00B8828E /* THMinusButton.m in Sources */,
 				003436D962CB408A0F6B32A9 /* Pods-TaphouseKit-dummy.m in Sources */,
+				93B0464B1AAA41D100887F18 /* THTableViewDataSource.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
