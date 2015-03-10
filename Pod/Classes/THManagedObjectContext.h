@@ -19,10 +19,11 @@ extern NSString *const ContextNeedsUIUpdateNotification;
  *
  *  @param storeURL          The location on disk where the store is to be kept.
  *  @param modelName         The name of the managed object model
+ *  @param storeType         The type of the data store. If this is nil, then it will default to NSSQLiteStoreType. Use this value if wanting a memory store type (NSInMemoryStoreType) which is useful for testing.
  *
  *  @return SBManagedObjectContext
  */
-+ (instancetype)createContextWithStoreURL:(NSURL *)storeURL modelName:(NSString *)modelName;
++ (instancetype)createContextWithStoreURL:(NSURL *)storeURL modelName:(NSString *)modelName storeType:(NSString *)storeType;
 
 /**
  *  Checks to see if the managed object model at the given URL matches what is in the app bundle's managed object model.

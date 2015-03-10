@@ -12,7 +12,7 @@ NSString *const ContextNeedsUIUpdateNotification = @"contextNeedsUIUpdate";
 
 @implementation THManagedObjectContext
 #pragma mark - API
-+ (instancetype)createContextWithStoreURL:(NSURL *)storeURL modelName:(NSString *)modelName
++ (instancetype)createContextWithStoreURL:(NSURL *)storeURL modelName:(NSString *)modelName storeType:(NSString *)storeType
 {
     NSMutableArray *models = [NSMutableArray array];
     NSManagedObjectModel *firstModel = [self loadManagedObjectModelNamed:modelName];
@@ -23,9 +23,12 @@ NSString *const ContextNeedsUIUpdateNotification = @"contextNeedsUIUpdate";
     
     NSPersistentStoreCoordinator *coordinator = [[NSPersistentStoreCoordinator alloc ]initWithManagedObjectModel:finalModel];
     NSError *error;
-    NSString *storeType = NSSQLiteStoreType;
     NSMutableDictionary *options = [@{NSMigratePersistentStoresAutomaticallyOption : @YES,
                                       NSInferMappingModelAutomaticallyOption : @YES} mutableCopy];
+    
+    if (storeType == nil) {
+        storeType = NSSQLiteStoreType;
+    }
     
     if (![coordinator addPersistentStoreWithType:storeType
                                    configuration:nil
