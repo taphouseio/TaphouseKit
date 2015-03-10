@@ -13,6 +13,7 @@
 		930CA48E1A85533D001CC012 /* THGearButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 930CA4871A85533D001CC012 /* THGearButton.m */; };
 		930CA48F1A85533D001CC012 /* THManagedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 930CA4891A85533D001CC012 /* THManagedObject.m */; };
 		930CA4901A85533D001CC012 /* THManagedObjectContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 930CA48B1A85533D001CC012 /* THManagedObjectContext.m */; };
+		9324A7881AAF3461003D6401 /* NSString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 9324A7871AAF3461003D6401 /* NSString+Extension.m */; };
 		9336A6A51A8D6AE10090E517 /* THModalSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 9336A6A41A8D6AE10090E517 /* THModalSegue.m */; };
 		93ACB1861AAA6B2E00998879 /* THImagePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 93ACB1851AAA6B2E00998879 /* THImagePicker.m */; };
 		93ACB1891AAA6E4D00998879 /* NSDate+extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 93ACB1881AAA6E4D00998879 /* NSDate+extension.m */; };
@@ -62,6 +63,8 @@
 		930CA4891A85533D001CC012 /* THManagedObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = THManagedObject.m; path = Pod/Classes/THManagedObject.m; sourceTree = "<group>"; };
 		930CA48A1A85533D001CC012 /* THManagedObjectContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = THManagedObjectContext.h; path = Pod/Classes/THManagedObjectContext.h; sourceTree = "<group>"; };
 		930CA48B1A85533D001CC012 /* THManagedObjectContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = THManagedObjectContext.m; path = Pod/Classes/THManagedObjectContext.m; sourceTree = "<group>"; };
+		9324A7861AAF3461003D6401 /* NSString+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+Extension.h"; path = "Pod/Classes/Categories/NSString+Extension.h"; sourceTree = "<group>"; };
+		9324A7871AAF3461003D6401 /* NSString+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+Extension.m"; path = "Pod/Classes/Categories/NSString+Extension.m"; sourceTree = "<group>"; };
 		9336A6A31A8D6AE10090E517 /* THModalSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = THModalSegue.h; path = Pod/Classes/Segues/THModalSegue.h; sourceTree = "<group>"; };
 		9336A6A41A8D6AE10090E517 /* THModalSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = THModalSegue.m; path = Pod/Classes/Segues/THModalSegue.m; sourceTree = "<group>"; };
 		93ACB1841AAA6B2E00998879 /* THImagePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = THImagePicker.h; path = Pod/Classes/Helpers/THImagePicker.h; sourceTree = "<group>"; };
@@ -229,6 +232,8 @@
 				93ACB1881AAA6E4D00998879 /* NSDate+extension.m */,
 				93BA633C1A85713F00B8828E /* NSFileManager+THExtension.h */,
 				93BA633D1A85713F00B8828E /* NSFileManager+THExtension.m */,
+				9324A7861AAF3461003D6401 /* NSString+Extension.h */,
+				9324A7871AAF3461003D6401 /* NSString+Extension.m */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -325,6 +330,7 @@
 		945227089B5BC9F3F50077B0 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = TH;
 				LastUpgradeCheck = 0510;
 			};
 			buildConfigurationList = 0826F1850E1E063837814B31 /* Build configuration list for PBXProject "Pods" */;
@@ -389,6 +395,7 @@
 				93BA63331A8562DA00B8828E /* THMinusButton.m in Sources */,
 				003436D962CB408A0F6B32A9 /* Pods-TaphouseKit-dummy.m in Sources */,
 				93B0464B1AAA41D100887F18 /* THTableViewDataSource.m in Sources */,
+				9324A7881AAF3461003D6401 /* NSString+Extension.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
