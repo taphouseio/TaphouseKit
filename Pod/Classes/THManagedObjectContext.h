@@ -17,27 +17,10 @@ extern NSString *const ContextNeedsUIUpdateNotification;
 /**
  *  Creates a new managed object context for use on the main queue.
  *
- *  @param storeURL          The location on disk where the store is to be kept.
  *  @param modelName         The name of the managed object model
- *  @param storeType         The type of the data store. If this is nil, then it will default to NSSQLiteStoreType. Use this value if wanting a memory store type (NSInMemoryStoreType) which is useful for testing.
+ *  @param concurrencyType   The concurrency type for the context
  *
  *  @return SBManagedObjectContext
  */
-+ (instancetype)createContextWithStoreURL:(NSURL *)storeURL modelName:(NSString *)modelName storeType:(NSString *)storeType;
-
-/**
- *  Checks to see if the managed object model at the given URL matches what is in the app bundle's managed object model.
- *
- *  @param storeURL The location of the persistent store.
- *
- *  @return YES if migration needs to happen, NO if not.
- */
-+ (BOOL)storeNeedsMigrationAtURL:(NSURL *)storeURL modelName:(NSString *)modelName;
-
-/**
- *  This method must be overridden by a subclass. Do not call super.
- *
- *  @return The URL where the datastore is to be kept.
- */
-+ (NSURL *)storeURL;
++ (instancetype)createContextWithModelName:(NSString *)modelName concurrencyType:(NSManagedObjectContextConcurrencyType)concurrencyType;
 @end

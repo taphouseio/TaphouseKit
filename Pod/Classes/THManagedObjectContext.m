@@ -12,7 +12,7 @@ NSString *const ContextNeedsUIUpdateNotification = @"contextNeedsUIUpdate";
 
 @implementation THManagedObjectContext
 #pragma mark - API
-+ (instancetype)createContextWithStoreURL:(NSURL *)storeURL modelName:(NSString *)modelName storeType:(NSString *)storeType
++ (instancetype)createContextWithModelName:(NSString *)modelName concurrencyType:(NSManagedObjectContextConcurrencyType)concurrencyType
 {
     NSMutableArray *models = [NSMutableArray array];
     NSManagedObjectModel *firstModel = [self loadManagedObjectModelNamed:modelName];
@@ -22,29 +22,21 @@ NSString *const ContextNeedsUIUpdateNotification = @"contextNeedsUIUpdate";
     NSAssert(finalModel != nil, @"Could not laod MOM");
     
     NSPersistentStoreCoordinator *coordinator = [[NSPersistentStoreCoordinator alloc ]initWithManagedObjectModel:finalModel];
-    NSError *error;
-    NSMutableDictionary *options = [@{NSMigratePersistentStoresAutomaticallyOption : @YES,
-                                      NSInferMappingModelAutomaticallyOption : @YES} mutableCopy];
     
-    if (storeType == nil) {
-        storeType = NSSQLiteStoreType;
-    }
-    
-    if (![coordinator addPersistentStoreWithType:storeType
-                                   configuration:nil
-                                             URL:storeURL
-                                         options:options
-                                           error:&error]) {
-        //TODO: Handle error better
-        NSLog(@"Failed creating persistent store with error: %@", error);
-        abort();
-    }
-    
-    THManagedObjectContext *context = [[self alloc] initWithPersistentStoreCoordinator:coordinator];
+    THManagedObjectContext *context = [[self alloc] initWithConcurrencyType:concurrencyType];
+    context.persistentStoreCoordinator = coordinator;
     
     return context;
 }
 
+#pragma mark - Private
+/**
+ *  Checks to see if the managed object model at the given URL matches what is in the app bundle's managed object model.
+ *
+ *  @param storeURL The location of the persistent store.
+ *
+ *  @return YES if migration needs to happen, NO if not.
+ */
 + (BOOL)storeNeedsMigrationAtURL:(NSURL *)storeURL modelName:(NSString *)modelName;
 {
     BOOL compatible = NO;
@@ -65,13 +57,6 @@ NSString *const ContextNeedsUIUpdateNotification = @"contextNeedsUIUpdate";
     return !compatible;
 }
 
-+ (NSURL *)storeURL
-{
-    [NSException raise:@"THException" format:@"This method must be overridden by a subclass."];
-    return nil;
-}
-
-#pragma mark - Private
 - (instancetype)initWithPersistentStoreCoordinator:(NSPersistentStoreCoordinator *)coordinator
 {
     self = [super initWithConcurrencyType:NSMainQueueConcurrencyType];
