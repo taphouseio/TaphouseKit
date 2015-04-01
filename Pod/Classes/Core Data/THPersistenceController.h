@@ -23,7 +23,7 @@ typedef void (^InitCallbackBlock)(void);
  *
  *  @return <#return value description#>
  */
-+ (instancetype)createGlobalPersistenceControllerWithCallback:(InitCallbackBlock)callback storeType:(NSString *)storeType;
++ (instancetype)createGlobalPersistenceControllerWithModelName:(NSString *)modelName storeURL:(NSURL *)storeURL storeType:(NSString *)storeType callback:(InitCallbackBlock)callback;
 
 /**
  *  Returns the global persistence controller. This must not be called before configuring with the +createGlobalPersistenceControllerWithCallback:storeType method
@@ -31,20 +31,6 @@ typedef void (^InitCallbackBlock)(void);
  *  @return The controller class to manage all the data persistence
  */
 + (instancetype)globalPersistenceController;
-
-/**
- *  Sub-classes must override this method
- *
- *  @return The URL to your data store
- */
-+ (NSURL *)storeURL;
-
-/**
- *  Sub-classes must override this method
- *
- *  @return The name of your managed object model
- */
-+ (NSString *)modelName;
 
 /**
  *  Performs a save on a background thread

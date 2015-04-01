@@ -19,13 +19,16 @@ static THPersistenceController *_globalPersistenceController = nil;
 
 @implementation THPersistenceController
 #pragma mark - API
-+ (instancetype)createGlobalPersistenceControllerWithCallback:(InitCallbackBlock)callback storeType:(NSString *)storeType
++ (instancetype)createGlobalPersistenceControllerWithModelName:(NSString *)modelName storeURL:(NSURL *)storeURL storeType:(NSString *)storeType callback:(InitCallbackBlock)callback;
 {
     if (_globalPersistenceController != nil) {
         return [THPersistenceController globalPersistenceController];
     }
     
-    _globalPersistenceController = [[THPersistenceController alloc] initWithCallback:callback storeType:storeType];
+    _globalPersistenceController = [[THPersistenceController alloc] initWithStoreType:storeType
+                                                                            modelName:modelName
+                                                                             storeURL:storeURL
+                                                                             callback:callback];
     return _globalPersistenceController;
 }
 
@@ -33,18 +36,6 @@ static THPersistenceController *_globalPersistenceController = nil;
 {
     NSAssert(_globalPersistenceController != nil, @"The global persistence controller must not be nil before usage.");
     return _globalPersistenceController;
-}
-
-+ (NSURL *)storeURL
-{
-    [NSException raise:@"THException" format:@"This method must be overridden by a subclass."];
-    return nil;
-}
-
-+ (NSString *)modelName
-{
-    [NSException raise:@"THException" format:@"This method must be overridden by a subclass."];
-    return nil;
 }
 
 - (void)save
@@ -74,29 +65,28 @@ static THPersistenceController *_globalPersistenceController = nil;
  *
  *  @return Ready to roll PersistenceController
  */
-- (instancetype)initWithCallback:(InitCallbackBlock)callback storeType:(NSString *)storeType
+- (instancetype)initWithStoreType:(NSString *)storeType modelName:(NSString *)modelName storeURL:(NSURL *)storeURL callback:(InitCallbackBlock)callback
 {
     self = [super init];
     
     if (self) {
         self.callbackBlock = callback;
-        [self setupCoreDataWithStoreType:storeType];
+        [self setupCoreDataWithStoreType:storeType modelName:modelName storeURL:storeURL];
     }
     
     return self;
 }
 
-- (void)setupCoreDataWithStoreType:(NSString *)storeType;
+- (void)setupCoreDataWithStoreType:(NSString *)storeType modelName:(NSString *)modelName storeURL:(NSURL *)storeURL
 {
     if (self.masterContext) {
         return;
     }
     
-    self.masterContext = [THManagedObjectContext createContextWithModelName:[THPersistenceController modelName]
+    self.masterContext = [THManagedObjectContext createContextWithModelName:modelName
                                                             concurrencyType:NSMainQueueConcurrencyType];
     
     self.privateContext = [[THManagedObjectContext alloc] initWithConcurrencyType:NSPrivateQueueConcurrencyType];
-    self.privateContext.persistentStoreCoordinator = self.masterContext.persistentStoreCoordinator;
     self.privateContext.parentContext = self.masterContext;
     
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
@@ -112,7 +102,7 @@ static THPersistenceController *_globalPersistenceController = nil;
         
         if (![coordinator addPersistentStoreWithType:persistentStoreType
                                        configuration:nil
-                                                 URL:[THPersistenceController storeURL]
+                                                 URL:storeURL
                                              options:options
                                                error:&error]) {
             //TODO: Handle error better
