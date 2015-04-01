@@ -10,7 +10,7 @@
 #import "THManagedObjectContext.h"
 
 @interface THPersistenceController ()
-@property (nonatomic, readwrite) NSManagedObjectContext *mainThreadContext;
+@property (nonatomic, readwrite) NSManagedObjectContext *masterContext;
 @property (nonatomic, strong) NSManagedObjectContext *privateContext;
 @property (nonatomic, copy) InitCallbackBlock callbackBlock;
 @end
@@ -19,13 +19,16 @@ static THPersistenceController *_globalPersistenceController = nil;
 
 @implementation THPersistenceController
 #pragma mark - API
-+ (instancetype)createGlobalPersistenceControllerWithCallback:(InitCallbackBlock)callback storeType:(NSString *)storeType
++ (instancetype)createGlobalPersistenceControllerWithModelName:(NSString *)modelName storeURL:(NSURL *)storeURL storeType:(NSString *)storeType callback:(InitCallbackBlock)callback;
 {
     if (_globalPersistenceController != nil) {
         return [THPersistenceController globalPersistenceController];
     }
     
-    _globalPersistenceController = [[THPersistenceController alloc] initWithCallback:callback storeType:storeType];
+    _globalPersistenceController = [[THPersistenceController alloc] initWithStoreType:storeType
+                                                                            modelName:modelName
+                                                                             storeURL:storeURL
+                                                                             callback:callback];
     return _globalPersistenceController;
 }
 
@@ -35,28 +38,16 @@ static THPersistenceController *_globalPersistenceController = nil;
     return _globalPersistenceController;
 }
 
-+ (NSURL *)storeURL
-{
-    [NSException raise:@"THException" format:@"This method must be overridden by a subclass."];
-    return nil;
-}
-
-+ (NSString *)modelName
-{
-    [NSException raise:@"THException" format:@"This method must be overridden by a subclass."];
-    return nil;
-}
-
 - (void)save
 {
-    if (![self.privateContext hasChanges] && ![self.mainThreadContext hasChanges]) {
+    if (![self.privateContext hasChanges] && ![self.masterContext hasChanges]) {
         return;
     }
     
-    [self.mainThreadContext performBlockAndWait:^{
+    [self.masterContext performBlockAndWait:^{
         NSError *saveError = nil;
         
-        NSAssert([self.mainThreadContext save:&saveError], @"Failed to save on the main thread: %@\n%@", saveError.localizedDescription, saveError.userInfo);
+        NSAssert([self.masterContext save:&saveError], @"Failed to save on the main thread: %@\n%@", saveError.localizedDescription, saveError.userInfo);
         
         [self.privateContext performBlock:^{
             NSError *privateError = nil;
@@ -74,30 +65,29 @@ static THPersistenceController *_globalPersistenceController = nil;
  *
  *  @return Ready to roll PersistenceController
  */
-- (instancetype)initWithCallback:(InitCallbackBlock)callback storeType:(NSString *)storeType
+- (instancetype)initWithStoreType:(NSString *)storeType modelName:(NSString *)modelName storeURL:(NSURL *)storeURL callback:(InitCallbackBlock)callback
 {
     self = [super init];
     
     if (self) {
         self.callbackBlock = callback;
-        [self setupCoreDataWithStoreType:storeType];
+        [self setupCoreDataWithStoreType:storeType modelName:modelName storeURL:storeURL];
     }
     
     return self;
 }
 
-- (void)setupCoreDataWithStoreType:(NSString *)storeType;
+- (void)setupCoreDataWithStoreType:(NSString *)storeType modelName:(NSString *)modelName storeURL:(NSURL *)storeURL
 {
-    if (self.mainThreadContext) {
+    if (self.masterContext) {
         return;
     }
     
-    self.privateContext = [THManagedObjectContext createContextWithModelName:[THPersistenceController modelName]
+    self.masterContext = [THManagedObjectContext createContextWithModelName:modelName
                                                             concurrencyType:NSMainQueueConcurrencyType];
     
-    self.mainThreadContext= [[THManagedObjectContext alloc] initWithConcurrencyType:NSPrivateQueueConcurrencyType];
-    self.mainThreadContext.persistentStoreCoordinator = self.mainThreadContext.persistentStoreCoordinator;
-    self.mainThreadContext.parentContext = self.mainThreadContext;
+    self.privateContext = [[THManagedObjectContext alloc] initWithConcurrencyType:NSPrivateQueueConcurrencyType];
+    self.privateContext.parentContext = self.masterContext;
     
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
         NSPersistentStoreCoordinator *coordinator = self.privateContext.persistentStoreCoordinator;
@@ -112,7 +102,7 @@ static THPersistenceController *_globalPersistenceController = nil;
         
         if (![coordinator addPersistentStoreWithType:persistentStoreType
                                        configuration:nil
-                                                 URL:[THPersistenceController storeURL]
+                                                 URL:storeURL
                                              options:options
                                                error:&error]) {
             //TODO: Handle error better
