@@ -10,7 +10,7 @@
 #import "THManagedObjectContext.h"
 
 @interface THPersistenceController ()
-@property (nonatomic, readwrite) NSManagedObjectContext *masterContext;
+@property (nonatomic, readwrite) NSManagedObjectContext *mainThreadContext;
 @property (nonatomic, strong) NSManagedObjectContext *privateContext;
 @property (nonatomic, copy) InitCallbackBlock callbackBlock;
 @end
@@ -49,14 +49,14 @@ static THPersistenceController *_globalPersistenceController = nil;
 
 - (void)save
 {
-    if (![self.privateContext hasChanges] && ![self.masterContext hasChanges]) {
+    if (![self.privateContext hasChanges] && ![self.mainThreadContext hasChanges]) {
         return;
     }
     
-    [self.masterContext performBlockAndWait:^{
+    [self.mainThreadContext performBlockAndWait:^{
         NSError *saveError = nil;
         
-        NSAssert([self.masterContext save:&saveError], @"Failed to save on the main thread: %@\n%@", saveError.localizedDescription, saveError.userInfo);
+        NSAssert([self.mainThreadContext save:&saveError], @"Failed to save on the main thread: %@\n%@", saveError.localizedDescription, saveError.userInfo);
         
         [self.privateContext performBlock:^{
             NSError *privateError = nil;
@@ -88,16 +88,16 @@ static THPersistenceController *_globalPersistenceController = nil;
 
 - (void)setupCoreDataWithStoreType:(NSString *)storeType;
 {
-    if (self.masterContext) {
+    if (self.mainThreadContext) {
         return;
     }
     
-    self.masterContext = [THManagedObjectContext createContextWithModelName:[THPersistenceController modelName]
+    self.privateContext = [THManagedObjectContext createContextWithModelName:[THPersistenceController modelName]
                                                             concurrencyType:NSMainQueueConcurrencyType];
     
-    self.privateContext = [[THManagedObjectContext alloc] initWithConcurrencyType:NSPrivateQueueConcurrencyType];
-    self.privateContext.persistentStoreCoordinator = self.masterContext.persistentStoreCoordinator;
-    self.privateContext.parentContext = self.masterContext;
+    self.mainThreadContext= [[THManagedObjectContext alloc] initWithConcurrencyType:NSPrivateQueueConcurrencyType];
+    self.mainThreadContext.persistentStoreCoordinator = self.mainThreadContext.persistentStoreCoordinator;
+    self.mainThreadContext.parentContext = self.mainThreadContext;
     
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
         NSPersistentStoreCoordinator *coordinator = self.privateContext.persistentStoreCoordinator;

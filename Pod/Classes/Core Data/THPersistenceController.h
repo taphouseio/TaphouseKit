@@ -12,7 +12,7 @@
 typedef void (^InitCallbackBlock)(void);
 
 @interface THPersistenceController : NSObject
-@property (nonatomic, readonly) NSManagedObjectContext *masterContext;
+@property (nonatomic, readonly) NSManagedObjectContext *mainThreadContext;
 
 #pragma mark - API
 /**
