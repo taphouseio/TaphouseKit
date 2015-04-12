@@ -9,7 +9,7 @@
 #import "NSString+THExtension.h"
 
 @implementation NSString (Extension)
--(NSString *)urlEncodeUsingEncoding:(NSStringEncoding)encoding {
+-(NSString *)th_urlEncodeUsingEncoding:(NSStringEncoding)encoding {
     return (NSString *)CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes(NULL,
                                                                                  (CFStringRef)self,
                                                                                  NULL,

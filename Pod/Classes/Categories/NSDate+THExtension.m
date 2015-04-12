@@ -9,7 +9,7 @@
 #import "NSDate+THExtension.h"
 
 @implementation NSDate (extension)
-+ (NSDate *)monthAndYearFromDate:(NSDate *)date
++ (NSDate *)th_monthAndYearFromDate:(NSDate *)date
 {
     NSCalendar *calendar = [NSCalendar currentCalendar];
     NSDateComponents *components = [calendar components:(NSCalendarUnitYear | NSCalendarUnitMonth) fromDate:date];

@@ -16,5 +16,5 @@
  *
  *  @return A date that is normalized to the first day of that date's month
  */
-+ (NSDate *)monthAndYearFromDate:(NSDate *)date;
++ (NSDate *)th_monthAndYearFromDate:(NSDate *)date;
 @end
