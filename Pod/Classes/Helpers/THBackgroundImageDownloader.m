@@ -29,13 +29,15 @@
 
 - (void)startDownload
 {
+    __weak typeof(self) weakSelf = self;
     NSURLSessionTask *task = [[NSURLSession sharedSession] dataTaskWithURL:self.url
                                                          completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
                                                              [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+                                                                 typeof(weakSelf) strongSelf = weakSelf;
                                                                  if (error) {
-                                                                     self.completionBlock(NO, nil);
+                                                                     strongSelf.completionBlock(NO, nil);
                                                                  } else {
-                                                                     self.completionBlock(YES, data);
+                                                                     strongSelf.completionBlock(YES, data);
                                                                  }
                                                              }];
                                                          }];
