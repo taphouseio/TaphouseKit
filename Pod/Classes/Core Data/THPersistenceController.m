@@ -46,12 +46,13 @@ static THPersistenceController *_globalPersistenceController = nil;
     
     [self.masterContext performBlockAndWait:^{
         NSError *saveError = nil;
-        
-        NSAssert([self.masterContext save:&saveError], @"Failed to save on the main thread: %@\n%@", saveError.localizedDescription, saveError.userInfo);
+        [self.masterContext save:&saveError];
+        NSAssert(saveError == nil, @"Failed to save on the main thread: %@\n%@", saveError.localizedDescription, saveError.userInfo);
         
         [self.privateContext performBlock:^{
             NSError *privateError = nil;
-            NSAssert([self.privateContext save:&privateError], @"Failed to save on the private thread.", privateError.localizedDescription, privateError.userInfo);
+            [self.privateContext save:&privateError];
+            NSAssert(privateError == nil, @"Failed to save on the private thread.", privateError.localizedDescription, privateError.userInfo);
         }];
     }];
 }

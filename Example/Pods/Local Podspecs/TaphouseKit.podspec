@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "TaphouseKit"
-  s.version          = “0.3”
+  s.version          = “0.3.1”
   s.summary          = "The common utilities used by Taphouse apps."
   s.description      = "Includes some Core Data helpers and custom views"
   s.homepage         = "https://github.com/taphouseio/TaphouseKit"
