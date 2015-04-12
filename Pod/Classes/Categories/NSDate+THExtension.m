@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 Taphouse Software LLC. All rights reserved.
 //
 
-#import "NSDate+extension.h"
+#import "NSDate+THExtension.h"
 
 @implementation NSDate (extension)
 + (NSDate *)monthAndYearFromDate:(NSDate *)date

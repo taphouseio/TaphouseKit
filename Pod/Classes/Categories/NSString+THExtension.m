@@ -6,7 +6,7 @@
 //
 //
 
-#import "NSString+Extension.h"
+#import "NSString+THExtension.h"
 
 @implementation NSString (Extension)
 -(NSString *)urlEncodeUsingEncoding:(NSStringEncoding)encoding {
