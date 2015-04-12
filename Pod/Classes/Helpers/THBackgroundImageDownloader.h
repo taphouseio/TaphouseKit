@@ -8,12 +8,21 @@
 
 #import <Foundation/Foundation.h>
 
+typedef void (^DownloadCompletionBlock)(BOOL succeeded, NSData *data);
+
 @interface THBackgroundImageDownloader : NSObject
 /**
- *  Asynchronously downloads a given image. It's returned in the completion block.
+ *  Asynchronously downloads a given image. It's returned in the completion block. Both parameters must not be nil. If either are nil, an assertion failure will occur.
  *
  *  @param url             URL of the image to be downloaded
  *  @param completionBlock What to do with the image when it is finished downloading
+ *
+ *  @return A configured instance of the downloader class. Use the -startDownload method to use it.
  */
-+ (void)downloadImageWithURL:(NSURL *)url completionBlock:(void (^)(BOOL succeeded, NSData *data))completionBlock;
+- (instancetype)initWithURL:(NSURL *)url completionBlock:(DownloadCompletionBlock)completionBlock;
+
+/**
+ *  Runs the image downloader, and calls the completion block when finished.
+ */
+- (void)startDownload;
 @end

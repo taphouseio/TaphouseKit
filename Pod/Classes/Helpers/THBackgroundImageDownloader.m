@@ -8,16 +8,34 @@
 
 #import "THBackgroundImageDownloader.h"
 
+@interface THBackgroundImageDownloader ()
+@property (nonatomic, copy)DownloadCompletionBlock completionBlock;
+@property (nonatomic, strong)NSURL *url;
+@end
+
 @implementation THBackgroundImageDownloader
-+ (void)downloadImageWithURL:(NSURL *)url completionBlock:(void (^)(BOOL succeeded, NSData *data))completionBlock
+- (instancetype)initWithURL:(NSURL *)url completionBlock:(DownloadCompletionBlock)completionBlock
 {
-    NSURLSessionTask *task = [[NSURLSession sharedSession] dataTaskWithURL:url
+    NSAssert(url != nil, @"There must be a URL submitted to the background image downloader class.");
+    NSAssert(completionBlock != nil, @"There must be a completion block submitted to the background image downloader class.");
+    
+    self = [super init];
+    if (self) {
+        self.completionBlock = completionBlock;
+        self.url = url;
+    }
+    return self;
+}
+
+- (void)startDownload
+{
+    NSURLSessionTask *task = [[NSURLSession sharedSession] dataTaskWithURL:self.url
                                                          completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
                                                              [[NSOperationQueue mainQueue] addOperationWithBlock:^{
                                                                  if (error) {
-                                                                     completionBlock(NO, nil);
+                                                                     self.completionBlock(NO, nil);
                                                                  } else {
-                                                                     completionBlock(YES, data);
+                                                                     self.completionBlock(YES, data);
                                                                  }
                                                              }];
                                                          }];
