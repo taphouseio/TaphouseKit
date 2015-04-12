@@ -16,5 +16,5 @@
  *
  *  @return A URL-encoded string using the sent in encodeing
  */
--(NSString *)urlEncodeUsingEncoding:(NSStringEncoding)encoding;
+-(NSString *)th_urlEncodeUsingEncoding:(NSStringEncoding)encoding;
 @end
