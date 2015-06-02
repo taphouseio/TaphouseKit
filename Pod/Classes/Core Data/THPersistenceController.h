@@ -21,7 +21,7 @@ typedef void (^InitCallbackBlock)(void);
  *  @param callback     What should happen after instantiation
  *  @param storeType    The type of the data store. If this is nil, then it will default to NSSQLiteStoreType. Use this value if wanting a memory store type (NSInMemoryStoreType) which is useful for testing.
  *
- *  @return <#return value description#>
+ *  @return An instance of the global persistence controller for usage
  */
 + (instancetype)createGlobalPersistenceControllerWithModelName:(NSString *)modelName storeURL:(NSURL *)storeURL storeType:(NSString *)storeType callback:(InitCallbackBlock)callback;
 
