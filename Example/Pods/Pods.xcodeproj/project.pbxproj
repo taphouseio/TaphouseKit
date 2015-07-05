@@ -12,7 +12,6 @@
 		930CA48D1A85533D001CC012 /* THFetchedResultsControllerHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 930CA4851A85533D001CC012 /* THFetchedResultsControllerHelper.m */; };
 		930CA48E1A85533D001CC012 /* THGearButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 930CA4871A85533D001CC012 /* THGearButton.m */; };
 		930CA48F1A85533D001CC012 /* THManagedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 930CA4891A85533D001CC012 /* THManagedObject.m */; };
-		930CA4901A85533D001CC012 /* THManagedObjectContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 930CA48B1A85533D001CC012 /* THManagedObjectContext.m */; };
 		9324A7881AAF3461003D6401 /* NSString+THExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 9324A7871AAF3461003D6401 /* NSString+THExtension.m */; };
 		9336A6A51A8D6AE10090E517 /* THModalSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 9336A6A41A8D6AE10090E517 /* THModalSegue.m */; };
 		93ACB1861AAA6B2E00998879 /* THImagePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 93ACB1851AAA6B2E00998879 /* THImagePicker.m */; };
@@ -62,8 +61,6 @@
 		930CA4871A85533D001CC012 /* THGearButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = THGearButton.m; path = Pod/Classes/Views/THGearButton.m; sourceTree = "<group>"; };
 		930CA4881A85533D001CC012 /* THManagedObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = THManagedObject.h; path = "Pod/Classes/Core Data/THManagedObject.h"; sourceTree = "<group>"; };
 		930CA4891A85533D001CC012 /* THManagedObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = THManagedObject.m; path = "Pod/Classes/Core Data/THManagedObject.m"; sourceTree = "<group>"; };
-		930CA48A1A85533D001CC012 /* THManagedObjectContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = THManagedObjectContext.h; path = "Pod/Classes/Core Data/THManagedObjectContext.h"; sourceTree = "<group>"; };
-		930CA48B1A85533D001CC012 /* THManagedObjectContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = THManagedObjectContext.m; path = "Pod/Classes/Core Data/THManagedObjectContext.m"; sourceTree = "<group>"; };
 		9324A7861AAF3461003D6401 /* NSString+THExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+THExtension.h"; path = "Pod/Classes/Categories/NSString+THExtension.h"; sourceTree = "<group>"; };
 		9324A7871AAF3461003D6401 /* NSString+THExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+THExtension.m"; path = "Pod/Classes/Categories/NSString+THExtension.m"; sourceTree = "<group>"; };
 		9336A6A31A8D6AE10090E517 /* THModalSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = THModalSegue.h; path = Pod/Classes/Segues/THModalSegue.h; sourceTree = "<group>"; };
@@ -185,8 +182,6 @@
 			children = (
 				93F046AE1ACB1C9300E51012 /* THPersistenceController.h */,
 				93F046AF1ACB1C9300E51012 /* THPersistenceController.m */,
-				930CA48A1A85533D001CC012 /* THManagedObjectContext.h */,
-				930CA48B1A85533D001CC012 /* THManagedObjectContext.m */,
 				930CA4881A85533D001CC012 /* THManagedObject.h */,
 				930CA4891A85533D001CC012 /* THManagedObject.m */,
 				930CA4841A85533D001CC012 /* THFetchedResultsControllerHelper.h */,
@@ -388,7 +383,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				93F046B01ACB1C9300E51012 /* THPersistenceController.m in Sources */,
-				930CA4901A85533D001CC012 /* THManagedObjectContext.m in Sources */,
 				930CA48F1A85533D001CC012 /* THManagedObject.m in Sources */,
 				930CA48E1A85533D001CC012 /* THGearButton.m in Sources */,
 				93ACB1891AAA6E4D00998879 /* NSDate+THExtension.m in Sources */,

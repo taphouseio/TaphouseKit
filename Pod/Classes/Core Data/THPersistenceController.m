@@ -7,7 +7,7 @@
 //
 
 #import "THPersistenceController.h"
-#import "THManagedObjectContext.h"
+@import CoreData;
 
 @interface THPersistenceController ()
 @property (nonatomic, readwrite) NSManagedObjectContext *masterContext;
@@ -84,11 +84,17 @@ static THPersistenceController *_globalPersistenceController = nil;
         return;
     }
     
-    self.masterContext = [THManagedObjectContext createContextWithModelName:modelName
-                                                            concurrencyType:NSMainQueueConcurrencyType];
+    NSURL *modelURL = [[NSBundle mainBundle] URLForResource:modelName withExtension:@"momd"];
+    NSManagedObjectModel *objectModel = [[NSManagedObjectModel alloc] initWithContentsOfURL:modelURL];
+    NSAssert(objectModel != nil, @"The managed object model failed to load.");
     
-    self.privateContext = [[THManagedObjectContext alloc] initWithConcurrencyType:NSPrivateQueueConcurrencyType];
-    self.privateContext.parentContext = self.masterContext;
+    NSPersistentStoreCoordinator *psc = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:objectModel];
+    NSAssert(psc != nil, @"Failed to load the persistent store coordinator.");
+    
+    self.masterContext = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSMainQueueConcurrencyType];
+    self.privateContext = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSPrivateQueueConcurrencyType];
+    self.privateContext.persistentStoreCoordinator = psc;
+    self.masterContext.parentContext = self.privateContext;
     
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
         NSPersistentStoreCoordinator *coordinator = self.privateContext.persistentStoreCoordinator;
@@ -96,12 +102,7 @@ static THPersistenceController *_globalPersistenceController = nil;
         NSDictionary *options = @{NSMigratePersistentStoresAutomaticallyOption : @YES,
                                   NSInferMappingModelAutomaticallyOption       : @YES};
         
-        NSString *persistentStoreType = storeType;
-        if (persistentStoreType == nil) {
-            persistentStoreType = NSSQLiteStoreType;
-        }
-        
-        if (![coordinator addPersistentStoreWithType:persistentStoreType
+        if (![coordinator addPersistentStoreWithType:storeType != nil ? storeType : NSSQLiteStoreType
                                        configuration:nil
                                                  URL:storeURL
                                              options:options

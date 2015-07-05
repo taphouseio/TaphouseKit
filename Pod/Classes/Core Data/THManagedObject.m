@@ -7,7 +7,7 @@
 //
 
 #import "THManagedObject.h"
-#import "THManagedObjectContext.h"
+@import CoreData;
 
 @implementation THManagedObject
 
@@ -45,7 +45,7 @@
     return result;
 }
 
-+ (NSArray *)allInstancesInContext:(THManagedObjectContext *)context;
++ (NSArray *)allInstancesInContext:(NSManagedObjectContext *)context;
 {
     return [self allInstancesWithPredicate:nil inContext:context];
 }
