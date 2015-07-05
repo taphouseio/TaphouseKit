@@ -20,7 +20,7 @@ extern NSString *const ContextNeedsUIUpdateNotification;
  *  @param modelName         The name of the managed object model
  *  @param concurrencyType   The concurrency type for the context
  *
- *  @return SBManagedObjectContext
+ *  @return THManagedObjectContext
  */
 + (instancetype)createContextWithModelName:(NSString *)modelName concurrencyType:(NSManagedObjectContextConcurrencyType)concurrencyType;
 @end
