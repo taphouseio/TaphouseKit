@@ -9,9 +9,7 @@
 /* Begin PBXBuildFile section */
 		003436D962CB408A0F6B32A9 /* Pods-TaphouseKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F4D619250E344FDA0AB86E95 /* Pods-TaphouseKit-dummy.m */; };
 		930CA48C1A85533D001CC012 /* THBackgroundImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 930CA4831A85533D001CC012 /* THBackgroundImageDownloader.m */; };
-		930CA48D1A85533D001CC012 /* THFetchedResultsControllerHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 930CA4851A85533D001CC012 /* THFetchedResultsControllerHelper.m */; };
 		930CA48E1A85533D001CC012 /* THGearButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 930CA4871A85533D001CC012 /* THGearButton.m */; };
-		930CA48F1A85533D001CC012 /* THManagedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 930CA4891A85533D001CC012 /* THManagedObject.m */; };
 		9324A7881AAF3461003D6401 /* NSString+THExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 9324A7871AAF3461003D6401 /* NSString+THExtension.m */; };
 		9336A6A51A8D6AE10090E517 /* THModalSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 9336A6A41A8D6AE10090E517 /* THModalSegue.m */; };
 		93ACB1861AAA6B2E00998879 /* THImagePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 93ACB1851AAA6B2E00998879 /* THImagePicker.m */; };
@@ -20,7 +18,6 @@
 		93BA63331A8562DA00B8828E /* THMinusButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 93BA63301A8562DA00B8828E /* THMinusButton.m */; };
 		93BA63341A8562DA00B8828E /* THPlusButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 93BA63321A8562DA00B8828E /* THPlusButton.m */; };
 		93BA633E1A85713F00B8828E /* NSFileManager+THExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 93BA633D1A85713F00B8828E /* NSFileManager+THExtension.m */; };
-		93F046B01ACB1C9300E51012 /* THPersistenceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93F046AF1ACB1C9300E51012 /* THPersistenceController.m */; };
 		E10FCEE03432C12988DFCB09 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81A5EBD336943D67B6AA2EB8 /* Foundation.framework */; };
 		EE02F56643EE7D61BFA5C9AD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81A5EBD336943D67B6AA2EB8 /* Foundation.framework */; };
 		F319DB333E27B59E6727B5F7 /* Pods-TaphouseKit-TaphouseKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C67C135209F530BBBADF016 /* Pods-TaphouseKit-TaphouseKit-dummy.m */; };
@@ -55,12 +52,8 @@
 		8C67C135209F530BBBADF016 /* Pods-TaphouseKit-TaphouseKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TaphouseKit-TaphouseKit-dummy.m"; sourceTree = "<group>"; };
 		930CA4821A85533D001CC012 /* THBackgroundImageDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = THBackgroundImageDownloader.h; path = Pod/Classes/Helpers/THBackgroundImageDownloader.h; sourceTree = "<group>"; };
 		930CA4831A85533D001CC012 /* THBackgroundImageDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = THBackgroundImageDownloader.m; path = Pod/Classes/Helpers/THBackgroundImageDownloader.m; sourceTree = "<group>"; };
-		930CA4841A85533D001CC012 /* THFetchedResultsControllerHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = THFetchedResultsControllerHelper.h; path = "Pod/Classes/Core Data/THFetchedResultsControllerHelper.h"; sourceTree = "<group>"; };
-		930CA4851A85533D001CC012 /* THFetchedResultsControllerHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = THFetchedResultsControllerHelper.m; path = "Pod/Classes/Core Data/THFetchedResultsControllerHelper.m"; sourceTree = "<group>"; };
 		930CA4861A85533D001CC012 /* THGearButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = THGearButton.h; path = Pod/Classes/Views/THGearButton.h; sourceTree = "<group>"; };
 		930CA4871A85533D001CC012 /* THGearButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = THGearButton.m; path = Pod/Classes/Views/THGearButton.m; sourceTree = "<group>"; };
-		930CA4881A85533D001CC012 /* THManagedObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = THManagedObject.h; path = "Pod/Classes/Core Data/THManagedObject.h"; sourceTree = "<group>"; };
-		930CA4891A85533D001CC012 /* THManagedObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = THManagedObject.m; path = "Pod/Classes/Core Data/THManagedObject.m"; sourceTree = "<group>"; };
 		9324A7861AAF3461003D6401 /* NSString+THExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+THExtension.h"; path = "Pod/Classes/Categories/NSString+THExtension.h"; sourceTree = "<group>"; };
 		9324A7871AAF3461003D6401 /* NSString+THExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+THExtension.m"; path = "Pod/Classes/Categories/NSString+THExtension.m"; sourceTree = "<group>"; };
 		9336A6A31A8D6AE10090E517 /* THModalSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = THModalSegue.h; path = Pod/Classes/Segues/THModalSegue.h; sourceTree = "<group>"; };
@@ -77,8 +70,6 @@
 		93BA63321A8562DA00B8828E /* THPlusButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = THPlusButton.m; path = Pod/Classes/Views/THPlusButton.m; sourceTree = "<group>"; };
 		93BA633C1A85713F00B8828E /* NSFileManager+THExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSFileManager+THExtension.h"; path = "Pod/Classes/Categories/NSFileManager+THExtension.h"; sourceTree = "<group>"; };
 		93BA633D1A85713F00B8828E /* NSFileManager+THExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSFileManager+THExtension.m"; path = "Pod/Classes/Categories/NSFileManager+THExtension.m"; sourceTree = "<group>"; };
-		93F046AE1ACB1C9300E51012 /* THPersistenceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = THPersistenceController.h; path = "Pod/Classes/Core Data/THPersistenceController.h"; sourceTree = "<group>"; };
-		93F046AF1ACB1C9300E51012 /* THPersistenceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = THPersistenceController.m; path = "Pod/Classes/Core Data/THPersistenceController.m"; sourceTree = "<group>"; };
 		9797B62D577ED3A017526804 /* Pods-TaphouseKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TaphouseKit.debug.xcconfig"; sourceTree = "<group>"; };
 		9D9CF92DF7EA46087C41C1A1 /* TaphouseKit.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TaphouseKit.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7024F0B83349F3DD689B485 /* Pods-TaphouseKit-TaphouseKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TaphouseKit-TaphouseKit-prefix.pch"; sourceTree = "<group>"; };
@@ -177,19 +168,6 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		930CA4911A855345001CC012 /* Core Data */ = {
-			isa = PBXGroup;
-			children = (
-				93F046AE1ACB1C9300E51012 /* THPersistenceController.h */,
-				93F046AF1ACB1C9300E51012 /* THPersistenceController.m */,
-				930CA4881A85533D001CC012 /* THManagedObject.h */,
-				930CA4891A85533D001CC012 /* THManagedObject.m */,
-				930CA4841A85533D001CC012 /* THFetchedResultsControllerHelper.h */,
-				930CA4851A85533D001CC012 /* THFetchedResultsControllerHelper.m */,
-			);
-			name = "Core Data";
-			sourceTree = "<group>";
-		};
 		930CA4921A855353001CC012 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -255,7 +233,6 @@
 				93BA633B1A85709900B8828E /* Categories */,
 				930CA4941A855367001CC012 /* Helpers */,
 				930CA4921A855353001CC012 /* Views */,
-				930CA4911A855345001CC012 /* Core Data */,
 				22CA63888AF8299922868A45 /* Support Files */,
 			);
 			name = TaphouseKit;
@@ -382,11 +359,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				93F046B01ACB1C9300E51012 /* THPersistenceController.m in Sources */,
-				930CA48F1A85533D001CC012 /* THManagedObject.m in Sources */,
 				930CA48E1A85533D001CC012 /* THGearButton.m in Sources */,
 				93ACB1891AAA6E4D00998879 /* NSDate+THExtension.m in Sources */,
-				930CA48D1A85533D001CC012 /* THFetchedResultsControllerHelper.m in Sources */,
 				93ACB1861AAA6B2E00998879 /* THImagePicker.m in Sources */,
 				930CA48C1A85533D001CC012 /* THBackgroundImageDownloader.m in Sources */,
 				9336A6A51A8D6AE10090E517 /* THModalSegue.m in Sources */,

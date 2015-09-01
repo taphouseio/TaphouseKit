@@ -20,7 +20,7 @@ it, simply add the following line to your Podfile:
 
 ## Author
 
-Jared Sorge, jared@jsorge.net
+Jared Sorge, contact@taphouse.io
 
 ## License
 
