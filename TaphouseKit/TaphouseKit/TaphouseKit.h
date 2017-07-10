@@ -14,9 +14,9 @@ FOUNDATION_EXPORT double TaphouseKitVersionNumber;
 //! Project version string for TaphouseKit.
 FOUNDATION_EXPORT const unsigned char TaphouseKitVersionString[];
 
-#import <TaphouseKit/NSDate+THExtensions.h>
-#import <TaphouseKit/NSFileManager+THExtensions.h>
-#import <TaphouseKit/NSString+THExtensions.h>
+#import <TaphouseKit/NSDate+THExtension.h>
+#import <TaphouseKit/NSFileManager+THExtension.h>
+#import <TaphouseKit/NSString+THExtension.h>
 
 #import <TaphouseKit/THBackgroundImageDownloader.h>
 #import <TaphouseKit/THImagePicker.h>
