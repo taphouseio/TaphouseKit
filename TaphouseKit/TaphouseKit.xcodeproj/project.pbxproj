@@ -28,6 +28,7 @@
 		93EC1F821F13E3F5001B1202 /* THGearButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 93EC1F6C1F13E2CA001B1202 /* THGearButton.m */; };
 		93EC1F831F13E3F5001B1202 /* THMinusButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 93EC1F6E1F13E2CA001B1202 /* THMinusButton.m */; };
 		93EC1F841F13E3F5001B1202 /* THPlusButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 93EC1F701F13E2CA001B1202 /* THPlusButton.m */; };
+		93EC1FC81F140E0F001B1202 /* Storyboardinitializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93EC1FC71F140E0F001B1202 /* Storyboardinitializable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,7 @@
 		93EC1F6E1F13E2CA001B1202 /* THMinusButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = THMinusButton.m; sourceTree = "<group>"; };
 		93EC1F6F1F13E2CA001B1202 /* THPlusButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = THPlusButton.h; sourceTree = "<group>"; };
 		93EC1F701F13E2CA001B1202 /* THPlusButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = THPlusButton.m; sourceTree = "<group>"; };
+		93EC1FC71F140E0F001B1202 /* Storyboardinitializable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboardinitializable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +128,7 @@
 				93EC1F641F13E2CA001B1202 /* THImagePicker.m */,
 				93EC1F651F13E2CA001B1202 /* THTableViewDataSource.h */,
 				93EC1F661F13E2CA001B1202 /* THTableViewDataSource.m */,
+				93EC1FC71F140E0F001B1202 /* Storyboardinitializable.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -205,6 +208,7 @@
 				TargetAttributes = {
 					93EC1F4B1F13E2B5001B1202 = {
 						CreatedOnToolsVersion = 9.0;
+						LastSwiftMigration = 0900;
 					};
 				};
 			};
@@ -240,6 +244,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93EC1FC81F140E0F001B1202 /* Storyboardinitializable.swift in Sources */,
 				93EC1F821F13E3F5001B1202 /* THGearButton.m in Sources */,
 				93EC1F801F13E3F5001B1202 /* THTableViewDataSource.m in Sources */,
 				93EC1F7C1F13E3F5001B1202 /* NSFileManager+THExtension.m in Sources */,
@@ -365,6 +370,8 @@
 		93EC1F551F13E2B5001B1202 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = GECHUE5BZ4;
@@ -377,6 +384,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = io.taphouse.TaphouseKit;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -384,6 +393,8 @@
 		93EC1F561F13E2B5001B1202 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = GECHUE5BZ4;
@@ -396,6 +407,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = io.taphouse.TaphouseKit;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -419,6 +431,7 @@
 				93EC1F561F13E2B5001B1202 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
