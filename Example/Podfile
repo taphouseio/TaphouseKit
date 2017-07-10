@@ -1,8 +1,0 @@
-source 'https://github.com/CocoaPods/Specs.git'
-
-
-target 'TaphouseKit', :exclusive => true do
-  pod "TaphouseKit", :path => "../"
-
-  
-end
