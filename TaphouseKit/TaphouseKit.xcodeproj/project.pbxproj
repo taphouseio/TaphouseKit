@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		930EB3141F16A60900205EB5 /* UINavigationController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 930EB3131F16A60900205EB5 /* UINavigationController+Extensions.swift */; };
 		93EC1F511F13E2B5001B1202 /* TaphouseKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 93EC1F4F1F13E2B5001B1202 /* TaphouseKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		93EC1F711F13E3AE001B1202 /* NSDate+THExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 93EC1F5A1F13E2CA001B1202 /* NSDate+THExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		93EC1F721F13E3B2001B1202 /* NSFileManager+THExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 93EC1F5C1F13E2CA001B1202 /* NSFileManager+THExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -32,6 +33,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		930EB3131F16A60900205EB5 /* UINavigationController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Extensions.swift"; sourceTree = "<group>"; };
 		93EC1F4C1F13E2B5001B1202 /* TaphouseKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TaphouseKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		93EC1F4F1F13E2B5001B1202 /* TaphouseKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TaphouseKit.h; sourceTree = "<group>"; };
 		93EC1F501F13E2B5001B1202 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 				93EC1F651F13E2CA001B1202 /* THTableViewDataSource.h */,
 				93EC1F661F13E2CA001B1202 /* THTableViewDataSource.m */,
 				93EC1FC71F140E0F001B1202 /* Storyboardinitializable.swift */,
+				930EB3131F16A60900205EB5 /* UINavigationController+Extensions.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -251,6 +254,7 @@
 				93EC1F831F13E3F5001B1202 /* THMinusButton.m in Sources */,
 				93EC1F811F13E3F5001B1202 /* THModalSegue.m in Sources */,
 				93EC1F841F13E3F5001B1202 /* THPlusButton.m in Sources */,
+				930EB3141F16A60900205EB5 /* UINavigationController+Extensions.swift in Sources */,
 				93EC1F7D1F13E3F5001B1202 /* NSString+THExtension.m in Sources */,
 				93EC1F7F1F13E3F5001B1202 /* THImagePicker.m in Sources */,
 				93EC1F7E1F13E3F5001B1202 /* THBackgroundImageDownloader.m in Sources */,
