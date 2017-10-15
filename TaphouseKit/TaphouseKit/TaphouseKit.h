@@ -16,7 +16,6 @@ FOUNDATION_EXPORT const unsigned char TaphouseKitVersionString[];
 
 #import <TaphouseKit/NSDate+THExtension.h>
 #import <TaphouseKit/NSFileManager+THExtension.h>
-#import <TaphouseKit/NSString+THExtension.h>
 
 #import <TaphouseKit/THBackgroundImageDownloader.h>
 #import <TaphouseKit/THImagePicker.h>

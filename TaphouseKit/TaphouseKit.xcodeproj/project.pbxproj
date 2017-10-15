@@ -11,7 +11,6 @@
 		93EC1F511F13E2B5001B1202 /* TaphouseKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 93EC1F4F1F13E2B5001B1202 /* TaphouseKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		93EC1F711F13E3AE001B1202 /* NSDate+THExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 93EC1F5A1F13E2CA001B1202 /* NSDate+THExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		93EC1F721F13E3B2001B1202 /* NSFileManager+THExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 93EC1F5C1F13E2CA001B1202 /* NSFileManager+THExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		93EC1F731F13E3B7001B1202 /* NSString+THExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 93EC1F5E1F13E2CA001B1202 /* NSString+THExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		93EC1F741F13E3BD001B1202 /* THBackgroundImageDownloader.h in Headers */ = {isa = PBXBuildFile; fileRef = 93EC1F611F13E2CA001B1202 /* THBackgroundImageDownloader.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		93EC1F751F13E3C1001B1202 /* THImagePicker.h in Headers */ = {isa = PBXBuildFile; fileRef = 93EC1F631F13E2CA001B1202 /* THImagePicker.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		93EC1F761F13E3C5001B1202 /* THTableViewDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = 93EC1F651F13E2CA001B1202 /* THTableViewDataSource.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -21,7 +20,6 @@
 		93EC1F7A1F13E3D8001B1202 /* THPlusButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 93EC1F6F1F13E2CA001B1202 /* THPlusButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		93EC1F7B1F13E3EB001B1202 /* NSDate+THExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 93EC1F5B1F13E2CA001B1202 /* NSDate+THExtension.m */; };
 		93EC1F7C1F13E3F5001B1202 /* NSFileManager+THExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 93EC1F5D1F13E2CA001B1202 /* NSFileManager+THExtension.m */; };
-		93EC1F7D1F13E3F5001B1202 /* NSString+THExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 93EC1F5F1F13E2CA001B1202 /* NSString+THExtension.m */; };
 		93EC1F7E1F13E3F5001B1202 /* THBackgroundImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 93EC1F621F13E2CA001B1202 /* THBackgroundImageDownloader.m */; };
 		93EC1F7F1F13E3F5001B1202 /* THImagePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 93EC1F641F13E2CA001B1202 /* THImagePicker.m */; };
 		93EC1F801F13E3F5001B1202 /* THTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 93EC1F661F13E2CA001B1202 /* THTableViewDataSource.m */; };
@@ -41,8 +39,6 @@
 		93EC1F5B1F13E2CA001B1202 /* NSDate+THExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDate+THExtension.m"; sourceTree = "<group>"; };
 		93EC1F5C1F13E2CA001B1202 /* NSFileManager+THExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSFileManager+THExtension.h"; sourceTree = "<group>"; };
 		93EC1F5D1F13E2CA001B1202 /* NSFileManager+THExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSFileManager+THExtension.m"; sourceTree = "<group>"; };
-		93EC1F5E1F13E2CA001B1202 /* NSString+THExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+THExtension.h"; sourceTree = "<group>"; };
-		93EC1F5F1F13E2CA001B1202 /* NSString+THExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+THExtension.m"; sourceTree = "<group>"; };
 		93EC1F611F13E2CA001B1202 /* THBackgroundImageDownloader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = THBackgroundImageDownloader.h; sourceTree = "<group>"; };
 		93EC1F621F13E2CA001B1202 /* THBackgroundImageDownloader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = THBackgroundImageDownloader.m; sourceTree = "<group>"; };
 		93EC1F631F13E2CA001B1202 /* THImagePicker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = THImagePicker.h; sourceTree = "<group>"; };
@@ -115,8 +111,6 @@
 				93EC1F5B1F13E2CA001B1202 /* NSDate+THExtension.m */,
 				93EC1F5C1F13E2CA001B1202 /* NSFileManager+THExtension.h */,
 				93EC1F5D1F13E2CA001B1202 /* NSFileManager+THExtension.m */,
-				93EC1F5E1F13E2CA001B1202 /* NSString+THExtension.h */,
-				93EC1F5F1F13E2CA001B1202 /* NSString+THExtension.m */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -165,7 +159,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				93EC1F731F13E3B7001B1202 /* NSString+THExtension.h in Headers */,
 				93EC1F721F13E3B2001B1202 /* NSFileManager+THExtension.h in Headers */,
 				93EC1F511F13E2B5001B1202 /* TaphouseKit.h in Headers */,
 				93EC1F791F13E3D3001B1202 /* THMinusButton.h in Headers */,
@@ -255,7 +248,6 @@
 				93EC1F811F13E3F5001B1202 /* THModalSegue.m in Sources */,
 				93EC1F841F13E3F5001B1202 /* THPlusButton.m in Sources */,
 				930EB3141F16A60900205EB5 /* UINavigationController+Extensions.swift in Sources */,
-				93EC1F7D1F13E3F5001B1202 /* NSString+THExtension.m in Sources */,
 				93EC1F7F1F13E3F5001B1202 /* THImagePicker.m in Sources */,
 				93EC1F7E1F13E3F5001B1202 /* THBackgroundImageDownloader.m in Sources */,
 				93EC1F7B1F13E3EB001B1202 /* NSDate+THExtension.m in Sources */,
