@@ -21,7 +21,7 @@ CLANG_ENABLE_MODULES = YES
 // keychain within your keychain path. A missing or invalid certificate will cause a
 // build error.
 
-CODE_SIGN_IDENTITY = 
+CODE_SIGN_IDENTITY[sdk=iphoneos*] = iPhone Developer
 
 
 
@@ -93,7 +93,7 @@ DYLIB_INSTALL_NAME_BASE = @rpath
 // in [Runtime Configuration
 // Guidelines](https://developer.apple.com/library/content/documentation/MacOSX/Conceptual/BPRuntimeConfig/000-Introduction/introduction.html).
 
-INFOPLIST_FILE = TaphouseKit/Info.plist
+INFOPLIST_FILE = $(SRCROOT)/Submodules/TaphouseKit/Supporting Files/Info.plist
 
 
 
@@ -160,3 +160,6 @@ SWIFT_VERSION = 4.2
 // compilation for iOS platforms.
 
 TARGETED_DEVICE_FAMILY = 1,2
+
+
+CODE_SIGN_STYLE = Automatic

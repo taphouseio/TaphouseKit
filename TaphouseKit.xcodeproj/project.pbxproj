@@ -1,0 +1,317 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BF_0B49A9C000B69916A84F6976A9414943 /* THPlusButton.m in Sources */ = {isa = PBXBuildFile; fileRef = FR_D2251F9C788290507EBCE18E98080663 /* THPlusButton.m */; };
+		BF_2C95A74D315D539DC11547D1056ED480 /* NSDate+THExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = FR_50D7065FD6F73947B5CAC5F417CBBF39 /* NSDate+THExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BF_2EFAD0C7F4147D68B31DD59C42089E85 /* NSDate+THExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = FR_B1B448C4BB9964640BF530FECCCF3874 /* NSDate+THExtension.m */; };
+		BF_3F513B07ABF7A04853A5C03144C30C9E /* Storyboardinitializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_3D463DDBF54681A1F60E86D6EBE01D55 /* Storyboardinitializable.swift */; };
+		BF_48F030FB2806F78C8B9D48493BD817BE /* TaphouseKit.h in Headers */ = {isa = PBXBuildFile; fileRef = FR_DAB11F91BAA6A042FCCDF1154C292EE0 /* TaphouseKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BF_6FE29179A05C1592B0E6FB02EA55E502 /* THModalSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = FR_7F8897C919FAA41C234C8D2678BAE3F9 /* THModalSegue.m */; };
+		BF_88C3DBD6255352456ED450E8C0EC908D /* THGearButton.m in Sources */ = {isa = PBXBuildFile; fileRef = FR_FBF7FA72D40FA37866F3DAB6115197AB /* THGearButton.m */; };
+		BF_92D258FD42C9041D95F0FE3DAA7DFED9 /* NSFileManager+THExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = FR_8CB563EB4AE3D48D8B9479F45CF036BB /* NSFileManager+THExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BF_95EDCA0336D3199D6F321D1B25FF0195 /* THBackgroundImageDownloader.h in Headers */ = {isa = PBXBuildFile; fileRef = FR_A6F5559492AC01FC85E3C271C139951F /* THBackgroundImageDownloader.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BF_96B2FE31385005F889DE93B0F05C0D93 /* THModalSegue.h in Headers */ = {isa = PBXBuildFile; fileRef = FR_E92F67E7016ABE4AE7A8AE1051235CAF /* THModalSegue.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BF_982E18CAC32BEE9F4DDE86C79A1855EA /* THImagePicker.h in Headers */ = {isa = PBXBuildFile; fileRef = FR_3CD96D063DC6461007EE024A735BFDFD /* THImagePicker.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BF_A7D167A1F2C86526538FD3B99AE14EE1 /* THTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = FR_6CC5ACAB2E9CBB8834A1AE605483C00B /* THTableViewDataSource.m */; };
+		BF_AC80E19DADF88FECB17C3434321622CB /* THGearButton.h in Headers */ = {isa = PBXBuildFile; fileRef = FR_192A699922402D05B5356F73DE17D396 /* THGearButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BF_AF7F347A937A811A429D593AD2992144 /* NSFileManager+THExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = FR_0E0E19E06628BFD1669D4401706BE33B /* NSFileManager+THExtension.m */; };
+		BF_BA8AEC26A33392D291DF5D5C70E95C38 /* UINavigationController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_16B54D4F7F17A70297D81BAB21D4A458 /* UINavigationController+Extensions.swift */; };
+		BF_BD3D83D641B6BBB50EE60B9D8687D7FB /* THBackgroundImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = FR_ED09FB9AD9C2DDD42AF2CA5D9CFF8BFE /* THBackgroundImageDownloader.m */; };
+		BF_C563A9106584E73F94A0610FF427F583 /* THTableViewDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = FR_36AB08280A2F3B85A86AFC4843A4E6A3 /* THTableViewDataSource.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BF_D7D3F8EE9F021BA696D9B520FC5EA193 /* THPlusButton.h in Headers */ = {isa = PBXBuildFile; fileRef = FR_1C2336E7D84336C05A543F9CB11256A6 /* THPlusButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BF_DEFF616DC868DDB65381C7E7D820ED1B /* THMinusButton.h in Headers */ = {isa = PBXBuildFile; fileRef = FR_01B2454CE0A98C9C6F6BF0ADD9908621 /* THMinusButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BF_E0BF7ED89277DA663A532DB259253329 /* THMinusButton.m in Sources */ = {isa = PBXBuildFile; fileRef = FR_5AEB0FDA264EB96817607BFEAD099517 /* THMinusButton.m */; };
+		BF_F630D05FA6CEF93931D2253F12CC137F /* THImagePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = FR_FB92D3AE3E6E0F8A42B45F968F61A970 /* THImagePicker.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		FR_01B2454CE0A98C9C6F6BF0ADD9908621 /* THMinusButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = THMinusButton.h; sourceTree = "<group>"; };
+		FR_0E0E19E06628BFD1669D4401706BE33B /* NSFileManager+THExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSFileManager+THExtension.m"; sourceTree = "<group>"; };
+		FR_16B54D4F7F17A70297D81BAB21D4A458 /* UINavigationController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Extensions.swift"; sourceTree = "<group>"; };
+		FR_192A699922402D05B5356F73DE17D396 /* THGearButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = THGearButton.h; sourceTree = "<group>"; };
+		FR_1C2336E7D84336C05A543F9CB11256A6 /* THPlusButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = THPlusButton.h; sourceTree = "<group>"; };
+		FR_325F20C2ECF07674BB07F4A4DBF840CA /* Project-Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Project-Debug.xcconfig"; sourceTree = "<group>"; };
+		FR_3685275BDA0F9B2DB73B48F2CFBC1FFE /* TaphouseKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TaphouseKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FR_36AB08280A2F3B85A86AFC4843A4E6A3 /* THTableViewDataSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = THTableViewDataSource.h; sourceTree = "<group>"; };
+		FR_3A84178991E329C758C92F0E56119FCD /* Project-Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Project-Release.xcconfig"; sourceTree = "<group>"; };
+		FR_3CD96D063DC6461007EE024A735BFDFD /* THImagePicker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = THImagePicker.h; sourceTree = "<group>"; };
+		FR_3D463DDBF54681A1F60E86D6EBE01D55 /* Storyboardinitializable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboardinitializable.swift; sourceTree = "<group>"; };
+		FR_48C0D108FC68F8FD97C81295D35E6FB6 /* TaphouseKit-Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "TaphouseKit-Debug.xcconfig"; sourceTree = "<group>"; };
+		FR_50D7065FD6F73947B5CAC5F417CBBF39 /* NSDate+THExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDate+THExtension.h"; sourceTree = "<group>"; };
+		FR_5AEB0FDA264EB96817607BFEAD099517 /* THMinusButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = THMinusButton.m; sourceTree = "<group>"; };
+		FR_6CC5ACAB2E9CBB8834A1AE605483C00B /* THTableViewDataSource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = THTableViewDataSource.m; sourceTree = "<group>"; };
+		FR_7F8897C919FAA41C234C8D2678BAE3F9 /* THModalSegue.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = THModalSegue.m; sourceTree = "<group>"; };
+		FR_81DFFE7ACC0501656E0891A17C075B39 /* TaphouseKit-Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "TaphouseKit-Release.xcconfig"; sourceTree = "<group>"; };
+		FR_8CB563EB4AE3D48D8B9479F45CF036BB /* NSFileManager+THExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSFileManager+THExtension.h"; sourceTree = "<group>"; };
+		FR_A6F5559492AC01FC85E3C271C139951F /* THBackgroundImageDownloader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = THBackgroundImageDownloader.h; sourceTree = "<group>"; };
+		FR_B1B448C4BB9964640BF530FECCCF3874 /* NSDate+THExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDate+THExtension.m"; sourceTree = "<group>"; };
+		FR_D2251F9C788290507EBCE18E98080663 /* THPlusButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = THPlusButton.m; sourceTree = "<group>"; };
+		FR_DAB11F91BAA6A042FCCDF1154C292EE0 /* TaphouseKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TaphouseKit.h; sourceTree = "<group>"; };
+		FR_E92F67E7016ABE4AE7A8AE1051235CAF /* THModalSegue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = THModalSegue.h; sourceTree = "<group>"; };
+		FR_ED09FB9AD9C2DDD42AF2CA5D9CFF8BFE /* THBackgroundImageDownloader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = THBackgroundImageDownloader.m; sourceTree = "<group>"; };
+		FR_FB92D3AE3E6E0F8A42B45F968F61A970 /* THImagePicker.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = THImagePicker.m; sourceTree = "<group>"; };
+		FR_FBF7FA72D40FA37866F3DAB6115197AB /* THGearButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = THGearButton.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		G_5B3F61BE20A0A90766C9D79A2B542813 /* xcconfigs */ = {
+			isa = PBXGroup;
+			children = (
+				FR_325F20C2ECF07674BB07F4A4DBF840CA /* Project-Debug.xcconfig */,
+				FR_3A84178991E329C758C92F0E56119FCD /* Project-Release.xcconfig */,
+				FR_48C0D108FC68F8FD97C81295D35E6FB6 /* TaphouseKit-Debug.xcconfig */,
+				FR_81DFFE7ACC0501656E0891A17C075B39 /* TaphouseKit-Release.xcconfig */,
+			);
+			path = xcconfigs;
+			sourceTree = "<group>";
+		};
+		G_6829C0DDA01A37DAF32C85C9A93EEC69 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				FR_3D463DDBF54681A1F60E86D6EBE01D55 /* Storyboardinitializable.swift */,
+				FR_A6F5559492AC01FC85E3C271C139951F /* THBackgroundImageDownloader.h */,
+				FR_ED09FB9AD9C2DDD42AF2CA5D9CFF8BFE /* THBackgroundImageDownloader.m */,
+				FR_3CD96D063DC6461007EE024A735BFDFD /* THImagePicker.h */,
+				FR_FB92D3AE3E6E0F8A42B45F968F61A970 /* THImagePicker.m */,
+				FR_36AB08280A2F3B85A86AFC4843A4E6A3 /* THTableViewDataSource.h */,
+				FR_6CC5ACAB2E9CBB8834A1AE605483C00B /* THTableViewDataSource.m */,
+				FR_16B54D4F7F17A70297D81BAB21D4A458 /* UINavigationController+Extensions.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		G_8021225A3AA7F715980CE26EAB1FA176 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FR_3685275BDA0F9B2DB73B48F2CFBC1FFE /* TaphouseKit.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		G_843C34D1B5D33DA248336A6F89806D42 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				G_FAF4FD387216120429B6CA86464A2EFE /* Categories */,
+				G_6829C0DDA01A37DAF32C85C9A93EEC69 /* Helpers */,
+				G_88E475BDD2A0422046C1CA47A011CF79 /* Segues */,
+				G_A98F1DBE18DFE708523A89ED1460349A /* Views */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		G_88E475BDD2A0422046C1CA47A011CF79 /* Segues */ = {
+			isa = PBXGroup;
+			children = (
+				FR_E92F67E7016ABE4AE7A8AE1051235CAF /* THModalSegue.h */,
+				FR_7F8897C919FAA41C234C8D2678BAE3F9 /* THModalSegue.m */,
+			);
+			path = Segues;
+			sourceTree = "<group>";
+		};
+		G_A951EF9C9EA564D138948B4C4811BC59 = {
+			isa = PBXGroup;
+			children = (
+				G_BC15ECF5F0C1F0639D4D1E746CF80914 /* Sources */,
+				G_5B3F61BE20A0A90766C9D79A2B542813 /* xcconfigs */,
+				G_8021225A3AA7F715980CE26EAB1FA176 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		G_A98F1DBE18DFE708523A89ED1460349A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FR_192A699922402D05B5356F73DE17D396 /* THGearButton.h */,
+				FR_FBF7FA72D40FA37866F3DAB6115197AB /* THGearButton.m */,
+				FR_01B2454CE0A98C9C6F6BF0ADD9908621 /* THMinusButton.h */,
+				FR_5AEB0FDA264EB96817607BFEAD099517 /* THMinusButton.m */,
+				FR_1C2336E7D84336C05A543F9CB11256A6 /* THPlusButton.h */,
+				FR_D2251F9C788290507EBCE18E98080663 /* THPlusButton.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		G_BC15ECF5F0C1F0639D4D1E746CF80914 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				FR_DAB11F91BAA6A042FCCDF1154C292EE0 /* TaphouseKit.h */,
+				G_843C34D1B5D33DA248336A6F89806D42 /* Classes */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		G_FAF4FD387216120429B6CA86464A2EFE /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				FR_50D7065FD6F73947B5CAC5F417CBBF39 /* NSDate+THExtension.h */,
+				FR_B1B448C4BB9964640BF530FECCCF3874 /* NSDate+THExtension.m */,
+				FR_8CB563EB4AE3D48D8B9479F45CF036BB /* NSFileManager+THExtension.h */,
+				FR_0E0E19E06628BFD1669D4401706BE33B /* NSFileManager+THExtension.m */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		HBP_39D21BC4D85D155ACD860C44270048EE /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF_2C95A74D315D539DC11547D1056ED480 /* NSDate+THExtension.h in Headers */,
+				BF_92D258FD42C9041D95F0FE3DAA7DFED9 /* NSFileManager+THExtension.h in Headers */,
+				BF_95EDCA0336D3199D6F321D1B25FF0195 /* THBackgroundImageDownloader.h in Headers */,
+				BF_AC80E19DADF88FECB17C3434321622CB /* THGearButton.h in Headers */,
+				BF_982E18CAC32BEE9F4DDE86C79A1855EA /* THImagePicker.h in Headers */,
+				BF_DEFF616DC868DDB65381C7E7D820ED1B /* THMinusButton.h in Headers */,
+				BF_96B2FE31385005F889DE93B0F05C0D93 /* THModalSegue.h in Headers */,
+				BF_D7D3F8EE9F021BA696D9B520FC5EA193 /* THPlusButton.h in Headers */,
+				BF_C563A9106584E73F94A0610FF427F583 /* THTableViewDataSource.h in Headers */,
+				BF_48F030FB2806F78C8B9D48493BD817BE /* TaphouseKit.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		NT_6FEB347E364E5C96FE9CF0BE6AAAB80E /* TaphouseKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CL_3CFAEE9BF07A6D3E2C86D39BC0606721 /* Build configuration list for PBXNativeTarget "TaphouseKit" */;
+			buildPhases = (
+				HBP_39D21BC4D85D155ACD860C44270048EE /* Headers */,
+				SBP_DF4E49020A045407BD7CDCA54ECCF204 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TaphouseKit;
+			productName = TaphouseKit;
+			productReference = FR_3685275BDA0F9B2DB73B48F2CFBC1FFE /* TaphouseKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		P_EE25256E52F065EAB9BA6BB7D0AED392 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1000;
+				TargetAttributes = {
+					NT_6FEB347E364E5C96FE9CF0BE6AAAB80E = {
+						DevelopmentTeam = GECHUE5BZ4;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = CL_38B2A1D9E1EECEF17E5A6B20006CA7CB /* Build configuration list for PBXProject "TaphouseKit" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = G_A951EF9C9EA564D138948B4C4811BC59;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				NT_6FEB347E364E5C96FE9CF0BE6AAAB80E /* TaphouseKit */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		SBP_DF4E49020A045407BD7CDCA54ECCF204 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF_2EFAD0C7F4147D68B31DD59C42089E85 /* NSDate+THExtension.m in Sources */,
+				BF_AF7F347A937A811A429D593AD2992144 /* NSFileManager+THExtension.m in Sources */,
+				BF_3F513B07ABF7A04853A5C03144C30C9E /* Storyboardinitializable.swift in Sources */,
+				BF_BD3D83D641B6BBB50EE60B9D8687D7FB /* THBackgroundImageDownloader.m in Sources */,
+				BF_88C3DBD6255352456ED450E8C0EC908D /* THGearButton.m in Sources */,
+				BF_F630D05FA6CEF93931D2253F12CC137F /* THImagePicker.m in Sources */,
+				BF_E0BF7ED89277DA663A532DB259253329 /* THMinusButton.m in Sources */,
+				BF_6FE29179A05C1592B0E6FB02EA55E502 /* THModalSegue.m in Sources */,
+				BF_0B49A9C000B69916A84F6976A9414943 /* THPlusButton.m in Sources */,
+				BF_A7D167A1F2C86526538FD3B99AE14EE1 /* THTableViewDataSource.m in Sources */,
+				BF_BA8AEC26A33392D291DF5D5C70E95C38 /* UINavigationController+Extensions.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		BC_1C88327C5590253FFE68A36AB0612940 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FR_48C0D108FC68F8FD97C81295D35E6FB6 /* TaphouseKit-Debug.xcconfig */;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		BC_8875E9DAF11059664F886CEC73779D03 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FR_325F20C2ECF07674BB07F4A4DBF840CA /* Project-Debug.xcconfig */;
+			buildSettings = {
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+			};
+			name = Debug;
+		};
+		BC_B3E0FF433A0738471F8C6A9FD411D231 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FR_81DFFE7ACC0501656E0891A17C075B39 /* TaphouseKit-Release.xcconfig */;
+			buildSettings = {
+			};
+			name = Release;
+		};
+		BC_C547D2BAD8AE2D5ECAA1CDC6684F71B4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FR_3A84178991E329C758C92F0E56119FCD /* Project-Release.xcconfig */;
+			buildSettings = {
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.2;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CL_38B2A1D9E1EECEF17E5A6B20006CA7CB /* Build configuration list for PBXProject "TaphouseKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BC_8875E9DAF11059664F886CEC73779D03 /* Debug */,
+				BC_C547D2BAD8AE2D5ECAA1CDC6684F71B4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		CL_3CFAEE9BF07A6D3E2C86D39BC0606721 /* Build configuration list for PBXNativeTarget "TaphouseKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BC_1C88327C5590253FFE68A36AB0612940 /* Debug */,
+				BC_B3E0FF433A0738471F8C6A9FD411D231 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = "";
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = P_EE25256E52F065EAB9BA6BB7D0AED392 /* Project object */;
+}

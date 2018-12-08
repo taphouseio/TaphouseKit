@@ -1,0 +1,13 @@
+name: TaphouseKit
+configFiles:
+  Debug: xcconfigs/Project-Debug.xcconfig
+  Release: xcconfigs/Project-Release.xcconfig
+targets:
+  TaphouseKit:
+    type: framework
+    platform: iOS
+    sources:
+      - Sources
+    configFiles:
+      Debug: xcconfigs/TaphouseKit-Debug.xcconfig
+      Release: xcconfigs/TaphouseKit-Release.xcconfig
