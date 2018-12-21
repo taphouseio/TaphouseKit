@@ -12,7 +12,7 @@
 @import MobileCoreServices;
 
 @interface THImagePicker () <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
-@property (nonatomic, weak)id<THImagePickerDelegate> delegate;
+@property (nonatomic, weak) id<THImagePickerDelegate> delegate;
 @property (nonatomic, strong) UIImagePickerController *imagePicker;
 @property (nonatomic) BOOL hasCamera;
 @property (nonatomic, weak) UIViewController *viewControllerPresentingPicker;
@@ -41,7 +41,9 @@
 }
 
 #pragma mark - API
-- (instancetype)initWithDelegate:(id<THImagePickerDelegate>)delegate saveToCamera:(BOOL)saveToCamera editFromCamera:(BOOL)cameraEdit
+- (instancetype)initWithDelegate:(id<THImagePickerDelegate>)delegate
+                    saveToCamera:(BOOL)saveToCamera
+                  editFromCamera:(BOOL)cameraEdit
 {
     self = [super init];
     if (self) {
@@ -72,16 +74,33 @@
 #pragma mark - UIImagePickerControllerDelegate
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
-    UIImage *pickedImage = info[UIImagePickerControllerEditedImage];
-    if (!pickedImage) {
-        pickedImage = info[UIImagePickerControllerOriginalImage];
+    if ([self.delegate respondsToSelector:@selector(imagePickerDelegate:didSelectImageAtURL:)]) {
+        NSURL *imageURL;
+        if (info[UIImagePickerControllerEditedImage] != nil) {
+            NSURL *tempURL = [[NSFileManager defaultManager] temporaryDirectory];
+            tempURL = [tempURL URLByAppendingPathComponent:@"image.jpg"];
+            NSData *imageData = UIImageJPEGRepresentation(info[UIImagePickerControllerEditedImage], 1.0);
+            [imageData writeToURL:tempURL atomically:YES];
+            imageURL = tempURL;
+        }
+        else {
+            imageURL = info[UIImagePickerControllerImageURL];
+        }
+
+        [self.delegate imagePickerDelegate:self didSelectImageAtURL:imageURL];
     }
-    
-    if (self.saveToCameraRoll && picker.sourceType == UIImagePickerControllerSourceTypeCamera) {
-        UIImageWriteToSavedPhotosAlbum(pickedImage, nil, nil, nil);        
+    else if ([self.delegate respondsToSelector:@selector(imagePickerDelegate:didSelectImage:)]) {
+        UIImage *pickedImage = info[UIImagePickerControllerEditedImage];
+        if (!pickedImage) {
+            pickedImage = info[UIImagePickerControllerOriginalImage];
+        }
+
+        if (self.saveToCameraRoll && picker.sourceType == UIImagePickerControllerSourceTypeCamera) {
+            UIImageWriteToSavedPhotosAlbum(pickedImage, nil, nil, nil);
+        }
+
+        [self.delegate imagePickerDelegate:self didSelectImage:pickedImage];
     }
-    
-    [self.delegate imagePickerDelegate:self didSelectImage:pickedImage];
 }
 
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
@@ -90,7 +109,8 @@
 }
 
 #pragma mark - Private
-- (void)showImagePickerViewWithType:(UIImagePickerControllerSourceType)sourceType inViewController:(UIViewController *)viewController
+- (void)showImagePickerViewWithType:(UIImagePickerControllerSourceType)sourceType
+                   inViewController:(UIViewController *)viewController
 {
     if (self.editFromCamera) {
         self.imagePicker.allowsEditing = YES;

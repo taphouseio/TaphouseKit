@@ -12,6 +12,7 @@
 
 @protocol THImagePickerDelegate;
 
+NS_ASSUME_NONNULL_BEGIN
 @interface THImagePicker : NSObject
 /**
  *  Create an instance of this class to use in place of implementing the UIImagePickerController and all of its things
@@ -48,7 +49,17 @@
 
 @protocol THImagePickerDelegate <NSObject>
 /**
- *  Called when the image picker picked or took an image successfully
+ *  Called when the image picker was cancelled by the user
+ *
+ *  @param picker The instance of this class
+ */
+- (void)imagePickerDelegateDidCancel:(THImagePicker *)picker;
+
+@optional
+
+/**
+ *  Called when the image picker picked or took an image successfully. The delegate should implement this
+ *  method or the variant that handles an image URL.
  *
  *  @param picker The instance of this class
  *  @param image  The image picked
@@ -56,9 +67,12 @@
 - (void)imagePickerDelegate:(THImagePicker *)picker didSelectImage:(UIImage *)image;
 
 /**
- *  Called when the image picker was cancelled by the user
- *
- *  @param picker The instance of this class
+ Called when the image picker picked or took an image successfully. The delegate should implement this
+ method or the variant that handles a `UIImage` directly.
+
+ @param picker The instance of this class
+ @param imageURL The URL of the picked image
  */
-- (void)imagePickerDelegateDidCancel:(THImagePicker *)picker;
+- (void)imagePickerDelegate:(THImagePicker *)picker didSelectImageAtURL:(NSURL *)imageURL;
 @end
+NS_ASSUME_NONNULL_END
