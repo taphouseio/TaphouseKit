@@ -16,7 +16,7 @@ public protocol StoryboardInitializable {
     static func makeFromStoryboard() -> Self
 }
 
-public extension StoryboardInitializable where Self : UIViewController {
+extension StoryboardInitializable where Self : UIViewController {
     public static var storyboardName: String {
         return "Main"
     }
