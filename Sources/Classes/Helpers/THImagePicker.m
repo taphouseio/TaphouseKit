@@ -83,8 +83,15 @@
             [imageData writeToURL:tempURL atomically:YES];
             imageURL = tempURL;
         }
-        else {
+        else if (info[UIImagePickerControllerImageURL] != nil) {
             imageURL = info[UIImagePickerControllerImageURL];
+        }
+        else {
+            NSURL *tempURL = [[NSFileManager defaultManager] temporaryDirectory];
+            tempURL = [tempURL URLByAppendingPathComponent:@"image.jpg"];
+            NSData *imageData = UIImageJPEGRepresentation(info[UIImagePickerControllerOriginalImage], 1.0);
+            [imageData writeToURL:tempURL atomically:YES];
+            imageURL = tempURL;
         }
 
         [self.delegate imagePickerDelegate:self didSelectImageAtURL:imageURL];
