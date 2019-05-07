@@ -8,7 +8,7 @@
 
 import UIKit
 
-public extension UINavigationController {
+extension UINavigationController {
     /// If the navigation controller just popped a view controller, this method returns it.
     /// This is helpful when wanting to know what just happened when using a `UINavigationControllerDelegate`.
     /// Got the idea from http://khanlou.com/2017/05/back-buttons-and-coordinators/
