@@ -8,7 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-IB_DESIGNABLE
 @interface THMinusButton : UIButton
 @property (nonatomic, strong) IBInspectable UIColor *strokeColor;
 @property (nonatomic) IBInspectable CGFloat strokeWidth;

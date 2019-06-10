@@ -8,7 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-IB_DESIGNABLE
 @interface THGearButton : UIButton
 @property (nonatomic, strong) IBInspectable UIColor *strokeColor;
 @end
